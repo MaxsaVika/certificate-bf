@@ -1,0 +1,151 @@
+.coverSection{
+  position: absolute;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.formWrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+  height: 260px;
+
+  box-sizing: border-box;
+  border-radius: 6px;
+
+  transform: translateX(-100%);
+  transition: transform 1500ms ease-in-out 250ms;
+  z-index: 1000;
+}
+
+.formWrapper.checked{
+  transform: translateX(0%);
+  transition: transform 2000ms cubic-bezier(.45,-0.23,.42,.94) 250ms;
+
+  z-index: 1000;
+}
+
+.coverImg{
+  width: 100%;
+  height: 100%;
+}
+
+.userForm{
+    width: 90%;
+    position: absolute;
+    top: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.userForm input{
+  width: 50%;
+  font-family: 'Evolventa';
+  font-size: 12px;
+  font-weight: 500;
+  /* color: rgba(206, 206, 148, 0.9); */
+  color: rgba(248, 211, 47, 0.9);
+  border: none;
+  /* border-bottom: 1px solid rgba(206, 206, 148, 0.723); */
+  border-bottom: 1px solid rgba(248, 211, 47, 0.9);
+  background: transparent;
+}
+
+.userForm input::placeholder{
+  font-family: 'Evolventa';
+  font-size: 12px;
+  color: rgba(206, 206, 148, 0.323);
+}
+
+.userFormBtn{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+}
+
+.userFormButtonCancel, .userFormButtonPay{
+  position: absolute;
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  background-color: transparent;
+  border: none;
+}
+
+.coverButtonIcon{ 
+  width: 26px;
+  height: 26px;
+  /* color: rgba(206, 206, 148, 0.323); */
+
+  color:rgb(131, 127, 108);
+}
+
+.iconActive{
+  color:rgba(248, 211, 47, 0.9);;
+
+}
+
+.userFormButtonCancel{
+  left: 0;
+  bottom: 5px;
+}
+
+.userFormButtonPay{
+  bottom: 5px;
+  right: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .formWrapper{
+    height: 440px;
+  }
+
+  .userForm input{
+    font-size: 24px;
+  }
+  
+  .userForm input::placeholder{
+    font-size: 22px;
+  }
+
+  .userFormBtn{
+    bottom: 10px;
+  }
+
+  .coverButtonIcon{ 
+    width: 36px;
+    height: 36px;
+  }
+
+  .userFormButtonCancel{
+    left: 5px;
+    bottom: 10px;
+  }
+  
+  .userFormButtonPay{
+    bottom: 10px;
+    right: 5px;
+  }
+}
+
+@media screen and (min-width: 1366px) {
+  .formWrapper{
+    transform: translateX(-120%);
+  
+  }
+  .userForm input{
+    font-size: 34px;
+  }
+  
+  .userForm input::placeholder{
+    font-size: 32px;
+  }
+}

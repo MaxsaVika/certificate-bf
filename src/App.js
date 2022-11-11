@@ -1,25 +1,46 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import css from "./App.module.css";
+import cssForm from "./FormWrapper/FormWrapper.module.css";
+import { config } from "react-spring";
+import VerticalCarousel from "./VerticalCarousel/VerticalCarousel";
+import Header from "./Header/Header";
+import FormWrapper from "./FormWrapper/FormWrapper";
+import cards from "./DataBase/certificate";
+import useCertificate from "./hooks/useCertificate";
 
-function App() {
+const App = () => {
+  const { info } = useCertificate();
+  console.log("info-App", info);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+      <section className={css.container}>
+        <div className={css.titleWrapper}>
+          {/* <h1 className={css.title}>ВИБЕРІТЬ СВІЙ ЧОРНИЙ СЕРТИФІКАТ</h1> */}
+          <h1 className={css.title}>
+            {info.check ? info.title : "ВИБЕРІТЬ СВІЙ ЧОРНИЙ СЕРТИФІКАТ"}
+          </h1>
+        </div>
+        <div className={css.AppVertical}>
+          <VerticalCarousel
+            cards={cards}
+            offsetRadius={2}
+            showNavigation={true}
+            animationConfig={config.gentle}
+          />
+
+          <FormWrapper
+            cn={
+              info.check
+                ? `${cssForm.formWrapper} ${cssForm.checked}`
+                : cssForm.formWrapper
+            }
+          />
+        </div>
+      </section>
+    </>
   );
-}
+};
 
 export default App;
