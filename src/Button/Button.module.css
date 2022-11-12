@@ -1,6 +1,6 @@
 .btn {
-  padding: 6px 8px;
-  width: 80px;
+  /* padding: 6px 8px; */
+  /* width: 80px; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,9 +24,9 @@
     transform: scale(1.15);
   }
 
-  @media screen and (min-width: 768px) {
+  /* @media screen and (min-width: 768px) {
     .btn {
       width: 120px;
       font-size: 16px;
     }
-  }
+  } */

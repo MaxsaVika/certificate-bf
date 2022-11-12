@@ -4,6 +4,8 @@ import Button from "../Button/Button";
 import css from "./Card.module.css";
 import { useDrag } from "@use-gesture/react";
 import useCertificate from "../hooks/useCertificate";
+// import { FiPlus, FiPlusCircle } from "react-icons/fi";
+import { FiPlus } from "react-icons/fi";
 import { nanoid } from "nanoid";
 
 function Card({
@@ -144,7 +146,8 @@ function Card({
           {distanceFactor === 1 ? (
             <Button
               type="button"
-              text="Вибрати"
+              icon={<FiPlus className={css.cardButtonIcon} />}
+              // text="Вибрати"
               onClick={(e) => handleSelect(e)}
             />
           ) : (

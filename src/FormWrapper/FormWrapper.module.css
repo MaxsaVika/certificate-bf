@@ -62,14 +62,14 @@
   color: rgba(206, 206, 148, 0.323);
 }
 
-.userFormBtn{
+/* .userFormBtn{
   position: absolute;
   bottom: 0;
   width: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: baseline;
-}
+} */
 
 .userFormButtonCancel, .userFormButtonPay{
   position: absolute;
@@ -78,6 +78,7 @@
   align-items: baseline;
   background-color: transparent;
   border: none;
+  cursor: pointer;
 }
 
 .coverButtonIcon{ 
@@ -103,6 +104,10 @@
   right: 0;
 }
 
+.userFormButtonCancel:hover, .iconActive:hover{
+  transform: scale(1.15);
+}
+
 @media screen and (min-width: 768px) {
   .formWrapper{
     height: 440px;
@@ -116,13 +121,9 @@
     font-size: 22px;
   }
 
-  .userFormBtn{
-    bottom: 10px;
-  }
-
   .coverButtonIcon{ 
-    width: 36px;
-    height: 36px;
+    width: 46px;
+    height: 46px;
   }
 
   .userFormButtonCancel{

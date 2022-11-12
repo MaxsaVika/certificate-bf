@@ -1,13 +1,16 @@
 import React from "react";
 // import Button from "../Button/Button";
 import useCertificate from "../hooks/useCertificate";
-import { IoArrowBackCircleOutline } from "react-icons/io5";
-import {
-  FiCheckCircle,
-  FiXCircle,
-  FiArrowLeftCircle,
-  FiArrowLeft,
-} from "react-icons/fi";
+// import { IoArrowBackCircleOutline } from "react-icons/io5";
+// import { TbArrowNarrowLeft, TbArrowBarToLeft } from "react-icons/tb";
+import { TbArrowNarrowLeft } from "react-icons/tb";
+// import {
+//   FiCheckCircle,
+//   FiXCircle,
+//   FiArrowLeftCircle,
+//   FiArrowLeft,
+// } from "react-icons/fi";
+import { FiCheckCircle } from "react-icons/fi";
 import css from "./FormWrapper.module.css";
 
 import cover from "../images/cover.png";
@@ -24,38 +27,48 @@ export default function FormWrapper({ cn }) {
     saveInfo({ ...info, name: "", phone: "", check: false });
   };
 
+  const handleSubmit = (e) => {
+    e.prventDefault();
+    console.log("info", info);
+  };
+
   return (
     <div className={css.coverSection}>
       <div className={cn}>
         <img src={cover} alt="BF" className={css.coverImg} />
-        <form className={css.userForm}>
-          <input
-            type="text"
-            name="name"
-            value={info.name}
-            required=""
-            placeholder="Ваше ім'я"
-            onChange={handleChange}
-          />
-          <input
-            type="tel"
-            name="phone"
-            value={info.phone}
-            required=""
-            placeholder="Tелефон"
-            onChange={handleChange}
-          />
-        </form>
+
         {info.check ? (
           <>
+            <form className={css.userForm}>
+              <input
+                type="text"
+                name="name"
+                value={info.name}
+                required
+                placeholder="Ваше ім'я"
+                onChange={handleChange}
+              />
+              <input
+                type="tel"
+                name="phone"
+                value={info.phone}
+                required
+                placeholder="Tелефон"
+                onChange={handleChange}
+              />
+            </form>
             <button
               className={css.userFormButtonCancel}
               type="button"
               onClick={handleCancel}
             >
-              <FiArrowLeft className={css.coverButtonIcon} />
+              <TbArrowNarrowLeft className={css.coverButtonIcon} />
             </button>
-            <button className={css.userFormButtonPay} type="submit">
+            <button
+              className={css.userFormButtonPay}
+              type="submit"
+              onSubmit={handleSubmit}
+            >
               <FiCheckCircle
                 className={
                   info.name && info.phone

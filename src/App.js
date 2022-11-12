@@ -10,7 +10,6 @@ import useCertificate from "./hooks/useCertificate";
 
 const App = () => {
   const { info } = useCertificate();
-  console.log("info-App", info);
 
   return (
     <>
