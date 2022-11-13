@@ -132,13 +132,13 @@ function Card({
           distanceFactor === 1 ? "rgb(226 214 214 / 15%) 0px 2px 8px" : "0"
         }`,
       }}
-      onClick={() => moveSlide(offsetFromMiddle)}
     >
       <animated.div
         className={css.card}
         style={props3}
         onMouseEnter={() => setShown(true)}
         onMouseLeave={() => setShown(false)}
+        onClick={() => moveSlide(offsetFromMiddle)}
       >
         <img src={img} alt={title} className={css.cardImg} />
 

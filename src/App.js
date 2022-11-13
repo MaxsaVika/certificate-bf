@@ -7,6 +7,7 @@ import Header from "./Header/Header";
 import FormWrapper from "./FormWrapper/FormWrapper";
 import cards from "./DataBase/certificate";
 import useCertificate from "./hooks/useCertificate";
+import Footer from "./Footer/Footer";
 
 const App = () => {
   const { info } = useCertificate();
@@ -38,6 +39,7 @@ const App = () => {
           />
         </div>
       </section>
+      <Footer />
     </>
   );
 };

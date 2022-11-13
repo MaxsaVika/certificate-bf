@@ -46,6 +46,8 @@ export default function FormWrapper({ cn }) {
                 value={info.name}
                 required
                 placeholder="Ваше ім'я"
+                pattern="^[a-zA-Z]+\s[a-zA-Z]+$"
+                title="Ім'я користувача має складатися з двох слів, розділених пробілом."
                 onChange={handleChange}
               />
               <input
@@ -54,6 +56,8 @@ export default function FormWrapper({ cn }) {
                 value={info.phone}
                 required
                 placeholder="Tелефон"
+                pattern="+38[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+                title="Формат: +38-067-123-45-67"
                 onChange={handleChange}
               />
             </form>

@@ -38,9 +38,20 @@ import {
 export default function Header() {
   return (
     <div className={css.Header}>
-      <div className={css.headerLogo}>
+      {/* <div className={css.headerLogo}>
         <img src={logo} alt="BF" className={css.logoImg} />
         <h2 className={css.logoName}>BODY FACTORY</h2>
+      </div> */}
+      <div>
+        <a
+          className={css.headerLogo}
+          href="https://bodyfactory.com.ua/"
+          rel="noreferrer"
+          target="_blank"
+        >
+          <img src={logo} alt="BF" className={css.logoImg} />
+          <h2 className={css.logoName}>BODY FACTORY</h2>
+        </a>
       </div>
       <div className={css.socialContainer}>
         <p className={css.socialPhone}>+38 096 918 90 89</p>
