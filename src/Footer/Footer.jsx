@@ -14,7 +14,10 @@ export default function Footer() {
             target="_blank"
           >
             <img src={logo} alt="BF" className={css.footerLogoImg} />
-            <h3 className={css.footerlogoName}>BODY FACTORY</h3>
+            <h3 className={css.footerlogoName}>
+              BODY FACTORY \{" "}
+              <span className={css.footerlogoAccent}>OFFICIAL</span>
+            </h3>
           </a>
         </div>
 

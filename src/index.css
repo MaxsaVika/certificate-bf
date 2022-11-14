@@ -23,7 +23,7 @@ ol, ul{
   margin: 0;
 }
 
-p, h1, h2, h3 {
+p, h1, h2, h3, button {
   padding: 0;
   margin: 0;
 }
@@ -34,4 +34,41 @@ img{
 
 a{
   text-decoration: none;
+}
+
+
+@font-face {
+  font-family: 'Evolventa';
+  src: local('Evolventa-Bold'), local('Evolventa-Bold'),
+      url('./fonts/Evolventa/Evolventa-Bold.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Evolventa';
+  src: local('Evolventa-BoldObligue'), local('Evolventa-BoldObligue'),
+      url('./fonts/Evolventa/Evolventa-BoldOblique.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Evolventa';
+  src: local('Evolventa-Oblique'), local('Evolventa-Oblique'),
+      url('./fonts/Evolventa/Evolventa-Oblique.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Evolventa';
+  src: local('Evolventa-Regular'), local('Evolventa-Regular'),
+      url('./fonts/Evolventa/Evolventa-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
 }

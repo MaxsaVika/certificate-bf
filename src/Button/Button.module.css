@@ -5,22 +5,22 @@
   justify-content: center;
   align-items: center;
 
-  font-size: 12px;
-  font-weight: 600;
-  font-family: 'Evolventa';
+  /* font-size: 12px; */
+  /* font-weight: 600; */
+  /* font-family: 'Evolventa'; */
   background-color: transparent;
   color: rgba(248, 211, 47, 0.9);
 
   border: none;
   outline: none;
-  border-radius: 6px; 
+  border-radius: 50%; 
   cursor: pointer;
   transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
   .btn:hover{
-    /* color:rgba(248, 211, 47, 0.9);; */
+    background-color:rgba(224, 209, 143, 0.2);;
     transform: scale(1.15);
   }
 

@@ -1,46 +1,30 @@
 import React from "react";
-import css from "./App.module.css";
-import cssForm from "./FormWrapper/FormWrapper.module.css";
-import { config } from "react-spring";
-import VerticalCarousel from "./VerticalCarousel/VerticalCarousel";
-import Header from "./Header/Header";
-import FormWrapper from "./FormWrapper/FormWrapper";
-import cards from "./DataBase/certificate";
-import useCertificate from "./hooks/useCertificate";
-import Footer from "./Footer/Footer";
+import { Navigate, Route, Routes } from "react-router-dom";
+// import { lazy } from "react";
+
+// const HomePage = lazy(() => import("./pages/HomePage.jsx"));
+// const Layout = lazy(() => import("./Layout/Layout.jsx"));
+// const SucсessPage = lazy(() => import("./pages/SuccessPage.jsx"));
+
+import Layout from "./Layout/Layout.jsx";
+import HomePage from "./pages/HomePage.jsx";
+import SuccessPage from "./pages/SuccessPage.jsx";
 
 const App = () => {
-  const { info } = useCertificate();
-
   return (
-    <>
-      <Header />
-      <section className={css.container}>
-        <div className={css.titleWrapper}>
-          {/* <h1 className={css.title}>ВИБЕРІТЬ СВІЙ ЧОРНИЙ СЕРТИФІКАТ</h1> */}
-          <h1 className={css.title}>
-            {info.check ? info.title : "ВИБЕРІТЬ СВІЙ ЧОРНИЙ СЕРТИФІКАТ"}
-          </h1>
-        </div>
-        <div className={css.AppVertical}>
-          <VerticalCarousel
-            cards={cards}
-            offsetRadius={2}
-            showNavigation={true}
-            animationConfig={config.gentle}
+    <div>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<HomePage />} />
+          <Route
+            path="/checkout"
+            element={<Navigate to="/checkout/success" />}
           />
-
-          <FormWrapper
-            cn={
-              info.check
-                ? `${cssForm.formWrapper} ${cssForm.checked}`
-                : cssForm.formWrapper
-            }
-          />
-        </div>
-      </section>
-      <Footer />
-    </>
+          <Route path="/checkout/success" element={<SuccessPage />} />
+        </Route>
+        <Route path="*" element={<Navigate to="/" />} />
+      </Routes>
+    </div>
   );
 };
 

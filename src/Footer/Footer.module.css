@@ -34,6 +34,11 @@
     color: #fff;
 }
 
+.footerlogoAccent{
+    font-size: 10px;
+    font-weight: 400;
+}
+
 .footerDescr, .footerAddress a{
     font-size: 12px;
     font-family: 'Evolventa';
@@ -52,6 +57,10 @@
     .footerlogoName{
         font-size: 18px;
     }
+
+    .footerlogoAccent{
+        font-size: 16px;
+    }
 }
 
 @media screen and (min-width:1366px){
@@ -60,6 +69,10 @@
     }
     .footerlogoName, .footerAddressTitle{
         font-size: 20px;
+    }
+
+    .footerlogoAccent{
+        font-size: 18px;
     }
 
     .footerWrapper{
@@ -75,6 +88,10 @@
     }
     .footerlogoName, .footerAddressTitle{
         font-size: 26px;
+    }
+
+    .footerlogoAccent{
+        font-size: 24px;
     }
 
     .footerWrapper{

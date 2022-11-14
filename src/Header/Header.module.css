@@ -55,6 +55,11 @@
     color: #FFFFFF;
 }
 
+.logoAccent{
+   font-weight: 400; 
+   font-size: 18px;
+}
+
 .socialContainer {
     display: flex;
     align-items: baseline;
