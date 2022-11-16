@@ -1,28 +1,28 @@
 {
   "files": {
-    "main.css": "/https://MaxsaVika.github.io/certificate-bf/static/css/main.faeda42b.css",
-    "main.js": "/https://MaxsaVika.github.io/certificate-bf/static/js/main.c578650c.js",
-    "static/media/cover.png": "/https://MaxsaVika.github.io/certificate-bf/static/media/cover.2e680ee340399e83aaf0.png",
-    "static/media/Evolventa-BoldOblique.ttf": "/https://MaxsaVika.github.io/certificate-bf/static/media/Evolventa-BoldOblique.594330c5e46adc3325b7.ttf",
-    "static/media/Evolventa-Bold.ttf": "/https://MaxsaVika.github.io/certificate-bf/static/media/Evolventa-Bold.bdd876d18c8ec79d6fbf.ttf",
-    "static/media/Evolventa-Oblique.ttf": "/https://MaxsaVika.github.io/certificate-bf/static/media/Evolventa-Oblique.2da977ce2c6b619009fa.ttf",
-    "static/media/Evolventa-Regular.ttf": "/https://MaxsaVika.github.io/certificate-bf/static/media/Evolventa-Regular.bea4dadebf6ff7f13e29.ttf",
-    "static/media/certificate-25.jpg": "/https://MaxsaVika.github.io/certificate-bf/static/media/certificate-25.5e901deeb864d4febddc.jpg",
-    "static/media/certificate-26.jpg": "/https://MaxsaVika.github.io/certificate-bf/static/media/certificate-26.b360016b64781bd0888e.jpg",
-    "static/media/certificate-21.jpg": "/https://MaxsaVika.github.io/certificate-bf/static/media/certificate-21.0d4f15d15e41720e7d64.jpg",
-    "static/media/certificate-22.jpg": "/https://MaxsaVika.github.io/certificate-bf/static/media/certificate-22.9329010d14f17eabddc3.jpg",
-    "static/media/certificate-27.jpg": "/https://MaxsaVika.github.io/certificate-bf/static/media/certificate-27.7234242616ba2d451fa4.jpg",
-    "static/media/certificate-23.jpg": "/https://MaxsaVika.github.io/certificate-bf/static/media/certificate-23.80dd5d34270fdc6a2d43.jpg",
-    "static/media/certificate-gift-2000.jpg": "/https://MaxsaVika.github.io/certificate-bf/static/media/certificate-gift-2000.d8cbe565a2ea2a124853.jpg",
-    "static/media/certificate-24.jpg": "/https://MaxsaVika.github.io/certificate-bf/static/media/certificate-24.b760c237d1e746aebfcb.jpg",
-    "static/media/certificate-gift-1000.jpg": "/https://MaxsaVika.github.io/certificate-bf/static/media/certificate-gift-1000.7dbeb294d5797d68d3a7.jpg",
-    "static/media/certificate-gift-500.jpg": "/https://MaxsaVika.github.io/certificate-bf/static/media/certificate-gift-500.6bc707a104e8fc4d7937.jpg",
-    "index.html": "/https://MaxsaVika.github.io/certificate-bf/index.html",
-    "main.faeda42b.css.map": "/https://MaxsaVika.github.io/certificate-bf/static/css/main.faeda42b.css.map",
-    "main.c578650c.js.map": "/https://MaxsaVika.github.io/certificate-bf/static/js/main.c578650c.js.map"
+    "main.css": "/certificate-bf/static/css/main.403df6a8.css",
+    "main.js": "/certificate-bf/static/js/main.0d3409ec.js",
+    "static/media/cover.png": "/certificate-bf/static/media/cover.2e680ee340399e83aaf0.png",
+    "static/media/Evolventa-BoldOblique.ttf": "/certificate-bf/static/media/Evolventa-BoldOblique.594330c5e46adc3325b7.ttf",
+    "static/media/Evolventa-Bold.ttf": "/certificate-bf/static/media/Evolventa-Bold.bdd876d18c8ec79d6fbf.ttf",
+    "static/media/Evolventa-Oblique.ttf": "/certificate-bf/static/media/Evolventa-Oblique.2da977ce2c6b619009fa.ttf",
+    "static/media/Evolventa-Regular.ttf": "/certificate-bf/static/media/Evolventa-Regular.bea4dadebf6ff7f13e29.ttf",
+    "static/media/certificate-25.jpg": "/certificate-bf/static/media/certificate-25.5e901deeb864d4febddc.jpg",
+    "static/media/certificate-26.jpg": "/certificate-bf/static/media/certificate-26.b360016b64781bd0888e.jpg",
+    "static/media/certificate-21.jpg": "/certificate-bf/static/media/certificate-21.0d4f15d15e41720e7d64.jpg",
+    "static/media/certificate-22.jpg": "/certificate-bf/static/media/certificate-22.9329010d14f17eabddc3.jpg",
+    "static/media/certificate-27.jpg": "/certificate-bf/static/media/certificate-27.7234242616ba2d451fa4.jpg",
+    "static/media/certificate-23.jpg": "/certificate-bf/static/media/certificate-23.80dd5d34270fdc6a2d43.jpg",
+    "static/media/certificate-gift-2000.jpg": "/certificate-bf/static/media/certificate-gift-2000.d8cbe565a2ea2a124853.jpg",
+    "static/media/certificate-24.jpg": "/certificate-bf/static/media/certificate-24.b760c237d1e746aebfcb.jpg",
+    "static/media/certificate-gift-1000.jpg": "/certificate-bf/static/media/certificate-gift-1000.7dbeb294d5797d68d3a7.jpg",
+    "static/media/certificate-gift-500.jpg": "/certificate-bf/static/media/certificate-gift-500.6bc707a104e8fc4d7937.jpg",
+    "index.html": "/certificate-bf/index.html",
+    "main.403df6a8.css.map": "/certificate-bf/static/css/main.403df6a8.css.map",
+    "main.0d3409ec.js.map": "/certificate-bf/static/js/main.0d3409ec.js.map"
   },
   "entrypoints": [
-    "static/css/main.faeda42b.css",
-    "static/js/main.c578650c.js"
+    "static/css/main.403df6a8.css",
+    "static/js/main.0d3409ec.js"
   ]
 }
