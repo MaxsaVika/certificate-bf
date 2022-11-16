@@ -67,13 +67,13 @@
     .footerDescr, .footerAddress a{
         font-size: 16px;
     }
-    .footerlogoName, .footerAddressTitle{
+    /* .footerlogoName, .footerAddressTitle{
         font-size: 20px;
-    }
+    } */
 
-    .footerlogoAccent{
+    /* .footerlogoAccent{
         font-size: 18px;
-    }
+    } */
 
     .footerWrapper{
         grid-template-columns: 50% auto;
@@ -87,11 +87,11 @@
         font-size: 22px;
     }
     .footerlogoName, .footerAddressTitle{
-        font-size: 26px;
+        font-size: 24px;
     }
 
     .footerlogoAccent{
-        font-size: 24px;
+        font-size: 20px;
     }
 
     .footerWrapper{

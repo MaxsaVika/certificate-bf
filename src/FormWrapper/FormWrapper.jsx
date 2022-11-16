@@ -56,8 +56,8 @@ export default function FormWrapper({ cn }) {
                 value={info.phone}
                 required
                 placeholder="Tелефон"
-                pattern="+38[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
-                title="Формат: +38-067-123-45-67"
+                pattern="+38[0-9]{10}"
+                title="Формат: +380671234567"
                 onChange={handleChange}
               />
             </form>
