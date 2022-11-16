@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/certificate-bf/static/css/main.dde84320.css",
-    "main.js": "/certificate-bf/static/js/main.74d5b7a0.js",
+    "main.css": "/certificate-bf/static/css/main.403df6a8.css",
+    "main.js": "/certificate-bf/static/js/main.81b5a163.js",
     "static/media/cover.png": "/certificate-bf/static/media/cover.2e680ee340399e83aaf0.png",
     "static/media/Evolventa-BoldOblique.ttf": "/certificate-bf/static/media/Evolventa-BoldOblique.594330c5e46adc3325b7.ttf",
     "static/media/Evolventa-Bold.ttf": "/certificate-bf/static/media/Evolventa-Bold.bdd876d18c8ec79d6fbf.ttf",
@@ -18,11 +18,11 @@
     "static/media/certificate-gift-1000.jpg": "/certificate-bf/static/media/certificate-gift-1000.7dbeb294d5797d68d3a7.jpg",
     "static/media/certificate-gift-500.jpg": "/certificate-bf/static/media/certificate-gift-500.6bc707a104e8fc4d7937.jpg",
     "index.html": "/certificate-bf/index.html",
-    "main.dde84320.css.map": "/certificate-bf/static/css/main.dde84320.css.map",
-    "main.74d5b7a0.js.map": "/certificate-bf/static/js/main.74d5b7a0.js.map"
+    "main.403df6a8.css.map": "/certificate-bf/static/css/main.403df6a8.css.map",
+    "main.81b5a163.js.map": "/certificate-bf/static/js/main.81b5a163.js.map"
   },
   "entrypoints": [
-    "static/css/main.dde84320.css",
-    "static/js/main.74d5b7a0.js"
+    "static/css/main.403df6a8.css",
+    "static/js/main.81b5a163.js"
   ]
 }
