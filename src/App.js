@@ -7,7 +7,9 @@ import { Navigate, Route, Routes } from "react-router-dom";
 // const SucсessPage = lazy(() => import("./pages/SuccessPage.jsx"));
 
 import Layout from "./Layout/Layout.jsx";
+import FailedPage from "./pages/FailedPage.jsx";
 import HomePage from "./pages/HomePage.jsx";
+import PendingPage from "./pages/PendingPage.jsx";
 import SuccessPage from "./pages/SuccessPage.jsx";
 
 const App = () => {
@@ -21,6 +23,8 @@ const App = () => {
             element={<Navigate to="/checkout/success" />}
           />
           <Route path="/checkout/success" element={<SuccessPage />} />
+          <Route path="/checkout/failed" element={<FailedPage />} />
+          <Route path="/checkout/pending" element={<PendingPage />} />
         </Route>
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
