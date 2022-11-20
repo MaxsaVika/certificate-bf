@@ -9,13 +9,8 @@
     background-color: black;
 }
 
-  /* .cardBtn{
-    position: absolute;
-    bottom: 0;
-    right: 0;
-  } */
-
 .cardImg{
+
   object-fit:scale-down;
   width: 100%;
   height: 100%;
@@ -30,11 +25,23 @@
   align-items: baseline;
   background-color: transparent;
   border: none;
+
 }
 
 .cardButtonIcon{
   width: 26px;
   height: 26px;
+}
+
+.cardBtnArrowDown{
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  background-color: transparent;
+  border: none;
 }
 
 @media screen and (min-width: 768px) {
@@ -44,6 +51,7 @@
   }
   
   .cardBtn{
+
     bottom: 10px;
     right: 5px;
   }

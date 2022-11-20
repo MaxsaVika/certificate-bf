@@ -1,6 +1,5 @@
 import React from "react";
 import css from "./Header.module.css";
-import logo from "../images/logo.png";
 
 // import SocialLinks from "../DataBase/SocialLinks";
 import {
@@ -15,24 +14,13 @@ import { Link } from "react-router-dom";
 export default function Header() {
   return (
     <div className={css.Header}>
-      {/* <div className={css.headerLogo}>
-        <img src={logo} alt="BF" className={css.logoImg} />
-        <h2 className={css.logoName}>BODY FACTORY</h2>
-      </div> */}
       <div style={{ display: "flex", alignItems: "center" }}>
-        <Link
-          to="/"
-          className={css.headerLogo}
-          // href="https://bodyfactory.com.ua/"
-          // rel="noreferrer"
-          // target="_blank"
-        >
-          <img src={logo} alt="BF" className={css.logoImg} />
+        <Link to="/" className={css.headerLogo}>
+          <img src="/images/logo.png" alt="BF" className={css.logoImg} />
           <h2 className={css.logoName}>
             BODY FACTORY \ <span className={css.logoAccent}>BLACK FRIDAY</span>
           </h2>
         </Link>
-        {/* <Link to="success">Success</Link> */}
       </div>
       <div className={css.socialContainer}>
         <p className={css.socialPhone}>+38 096 918 90 89</p>

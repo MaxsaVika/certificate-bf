@@ -7,6 +7,6 @@ export default function FailedPage() {
   const goBack = () => navigate("/");
 
   return (
-    <PaymentNotes text="Зачекайте, щось пішло не так....." onClick={goBack} />
+    <PaymentNotes text="Зачекайте, щось пішло не так..." onClick={goBack} />
   );
 }

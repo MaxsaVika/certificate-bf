@@ -13,7 +13,7 @@ export default function PaymentNotes({ text, onClick }) {
             type="button"
             onClick={onClick}
             icon={<TbArrowNarrowRight className={css.iconBack} />}
-          />
+          ></Button>
         </div>
       </div>
     </div>

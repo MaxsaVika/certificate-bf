@@ -1,20 +1,9 @@
-import certificate1 from "../images/certificates/certificate-21.jpg";
-import certificate2 from "../images/certificates/certificate-22.jpg";
-import certificate3 from "../images/certificates/certificate-23.jpg";
-import certificate4 from "../images/certificates/certificate-24.jpg";
-import certificate5 from "../images/certificates/certificate-25.jpg";
-import certificate6 from "../images/certificates/certificate-26.jpg";
-import certificate7 from "../images/certificates/certificate-27.jpg";
-import certificateGift1 from "../images/certificates/certificate-gift-500.jpg";
-import certificateGift2 from "../images/certificates/certificate-gift-1000.jpg";
-import certificateGift3 from "../images/certificates/certificate-gift-2000.jpg";
-
 const cards = [
   {
     key: 1,
     id: 1,
     content: {
-      img: certificate1,
+      img: "/images/certificates/certificate-21.jpg",
       title: "Корекція фігури Основна (10 сеансів)",
       price: "4480",
     },
@@ -23,7 +12,7 @@ const cards = [
     key: 2,
     id: 2,
     content: {
-      img: certificate2,
+      img: "/images/certificates/certificate-22.jpg",
       title: "Корекція фігури Експрес (6 сеансів)",
       price: "2730",
     },
@@ -32,7 +21,7 @@ const cards = [
     key: 3,
     id: 1,
     content: {
-      img: certificate3,
+      img: "/images/certificates/certificate-23.jpg",
       title: "6 лікувальних масажів спини",
       price: "2137",
     },
@@ -41,7 +30,7 @@ const cards = [
     key: 4,
     id: 1,
     content: {
-      img: certificate4,
+      img: "/images/certificates/certificate-24.jpg",
       title: "6 аромамасажів",
       price: "4500",
     },
@@ -50,7 +39,7 @@ const cards = [
     key: 5,
     id: 1,
     content: {
-      img: certificate5,
+      img: "/images/certificates/certificate-25.jpg",
       title: "6 Лімфодренажних масажів",
       price: "3150",
     },
@@ -59,7 +48,7 @@ const cards = [
     key: 6,
     id: 1,
     content: {
-      img: certificate6,
+      img: "/images/certificates/certificate-26.jpg",
       title: "6 Загально оздоровчих масажів",
       price: "3037",
     },
@@ -68,7 +57,7 @@ const cards = [
     key: 7,
     id: 7,
     content: {
-      img: certificate7,
+      img: "/images/certificates/certificate-27.jpg",
       title: "6 Масажів м’язове відновлення",
       price: "2925",
     },
@@ -77,7 +66,7 @@ const cards = [
     key: 8,
     id: 8,
     content: {
-      img: certificateGift1,
+      img: "/images/certificates/certificate-gift-500.jpg",
       title: "Подарунковий сертифікат номіналом 500грн",
       price: "500",
     },
@@ -86,7 +75,7 @@ const cards = [
     key: 9,
     id: 9,
     content: {
-      img: certificateGift2,
+      img: "/images/certificates/certificate-gift-1000.jpg",
       title: "Подарунковий сертифікат номіналом 1000грн",
       price: "1000",
     },
@@ -95,7 +84,7 @@ const cards = [
     key: 10,
     id: 10,
     content: {
-      img: certificateGift3,
+      img: "/images/certificates/certificate-gift-2000.jpg",
       title: "Подарунковий сертифікат номіналом 2000грн",
       price: "2000",
     },

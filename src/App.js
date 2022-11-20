@@ -1,31 +1,22 @@
 import React from "react";
 import { Navigate, Route, Routes } from "react-router-dom";
-// import { lazy } from "react";
-
-// const HomePage = lazy(() => import("./pages/HomePage.jsx"));
-// const Layout = lazy(() => import("./Layout/Layout.jsx"));
-// const SucсessPage = lazy(() => import("./pages/SuccessPage.jsx"));
+import css from "./App.module.css";
 
 import Layout from "./Layout/Layout.jsx";
 import FailedPage from "./pages/FailedPage.jsx";
 import HomePage from "./pages/HomePage.jsx";
-import PendingPage from "./pages/PendingPage.jsx";
 import SuccessPage from "./pages/SuccessPage.jsx";
 
 const App = () => {
   return (
-    <div>
+    <div className={css.appWrapper}>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
-          <Route
-            path="/checkout"
-            element={<Navigate to="/checkout/success" />}
-          />
-          <Route path="/checkout/success" element={<SuccessPage />} />
+          {/* <Route path="/checkout/success" element={<SuccessPage />} /> */}
           <Route path="/checkout/failed" element={<FailedPage />} />
-          <Route path="/checkout/pending" element={<PendingPage />} />
         </Route>
+        <Route path="/checkout/success" element={<SuccessPage />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </div>

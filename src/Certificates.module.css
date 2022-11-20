@@ -12,7 +12,7 @@
 }
 
 .title{
-  height: 135px;
+  height: 115px;
   text-align: center;
   display: flex;
   align-items: center;
@@ -21,7 +21,7 @@
   font-weight: 700;
   font-size: 28px;
   letter-spacing: 1.3px;
-  line-height: 45px;
+  line-height: 35px;
   text-transform: uppercase;
 
   color: #FFFFFF;
@@ -132,13 +132,4 @@
   font-weight: 400;
   font-style: normal;
   font-display: swap;
-}
-
-@font-face {
-  font-family: 'Carolina';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Carolina'), local('Carolina-Regular'),
-      url(http://allfont.ru/cache/fonts/carolina_a6833d8b794dcdacf77a402d9e3345e6.woff) format('woff'),
-      url(http://allfont.ru/cache/fonts/carolina_a6833d8b794dcdacf77a402d9e3345e6.ttf) format('truetype');
 }

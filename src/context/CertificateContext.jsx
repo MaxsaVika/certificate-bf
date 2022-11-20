@@ -6,8 +6,8 @@ export const defaultInfo = {
   id: "",
   title: "",
   price: "",
-  name: "",
-  phone: "",
+  // name: "",
+  // phone: "",
   check: false,
 };
 

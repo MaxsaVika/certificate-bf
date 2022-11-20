@@ -1,86 +1,189 @@
-import React from "react";
-// import Button from "../Button/Button";
+import React, { useState, useEffect } from "react";
 import useCertificate from "../hooks/useCertificate";
-// import { IoArrowBackCircleOutline } from "react-icons/io5";
-// import { TbArrowNarrowLeft, TbArrowBarToLeft } from "react-icons/tb";
-import { TbArrowNarrowLeft } from "react-icons/tb";
-// import {
-//   FiCheckCircle,
-//   FiXCircle,
-//   FiArrowLeftCircle,
-//   FiArrowLeft,
-// } from "react-icons/fi";
-import { FiCheckCircle } from "react-icons/fi";
+import { TbArrowNarrowLeft, TbCheck } from "react-icons/tb";
 import css from "./FormWrapper.module.css";
-
-import cover from "../images/cover.png";
+import InputMask from "react-input-mask";
+import { useDrag } from "@use-gesture/react";
+import { useValidation } from "../hooks/useValidation";
 
 export default function FormWrapper({ cn }) {
   const { info, saveInfo } = useCertificate();
+  const { validate } = useValidation();
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    saveInfo({ ...info, [name]: value });
-  };
+  const [error, setError] = useState(null);
+  const [clientName, setClientName] = useState("");
+  const [clientPhone, setClientPhone] = useState("");
+  const [isDisabled, setIsDisabled] = useState(true);
+  const [validationResult, setValidationResult] = useState({
+    name: "",
+    phone: "",
+  });
+
+  const handleChangeName = (e) => setClientName(e.target.value);
+  const handleChangePhone = (e) => setClientPhone(e.target.value);
+
+  useEffect(() => {
+    setValidationResult({ name: "", phone: "" });
+
+    if (clientName && clientPhone) {
+      setIsDisabled(false);
+    }
+  }, [clientName, clientPhone]);
 
   const handleCancel = () => {
-    saveInfo({ ...info, name: "", phone: "", check: false });
+    saveInfo((prev) => ({ ...prev, check: false }));
   };
 
-  const handleSubmit = (e) => {
-    e.prventDefault();
-    console.log("info", info);
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    const validatedName = validate("name", clientName);
+    const validatedPhone = validate("phone", clientPhone);
+    const hasErrors = [validatedName, validatedPhone].filter((item) => !!item);
+
+    if (hasErrors.length > 0) {
+      setIsDisabled(true);
+      setValidationResult((prev) => ({
+        ...prev,
+        name: validatedName,
+      }));
+      setValidationResult((prev) => ({
+        ...prev,
+        phone: validatedPhone,
+      }));
+      return;
+    }
+
+    setError(null);
+
+    // saveInfo({
+    //   ...info,
+    //   name: clientName,
+    //   phone: clientPhone.replace(/\s/g, "").slice(1),
+    // });
+
+    try {
+      const response = await fetch("https://tsless.vercel.app/api/", {
+        method: "POST",
+        body: JSON.stringify({
+          amount: 1,
+          orderDescription: info.title,
+          orderId: info.id,
+          name: clientName,
+          phone: clientPhone,
+        }),
+      });
+
+      const responseJSON = await response.json();
+
+      if ("url" in responseJSON) {
+        const url = responseJSON.url;
+
+        window.location.replace(url);
+      } else {
+        setError(error);
+      }
+    } catch (error) {
+      setError(error.message);
+      return error;
+    } finally {
+      setClientName("");
+      setClientPhone("");
+    }
   };
+
+  console.log("info", info);
+
+  const bind = useDrag(
+    ({ active, movement: [mx], direction: [xDir], cancel }) => {
+      if (!active && Math.abs(mx) > 10 && xDir < 0) {
+        saveInfo((prev) => ({ ...prev, check: false }));
+        cancel();
+      }
+    }
+  );
 
   return (
     <div className={css.coverSection}>
-      <div className={cn}>
-        <img src={cover} alt="BF" className={css.coverImg} />
+      <div {...bind()} className={cn}>
+        <img src="/images/cover.png" alt="BF" className={css.coverImg} />
 
         {info.check ? (
           <>
-            <form className={css.userForm}>
+            <form className={css.userForm} onSubmit={handleSubmit}>
               <input
                 type="text"
-                name="name"
-                value={info.name}
+                name="clientName"
+                value={clientName}
+                className={
+                  !!validationResult["name"]
+                    ? `${css.userFormInput} ${css.inputError}`
+                    : css.userFormInput
+                }
+                autoComplete="off"
                 required
                 placeholder="Ваше ім'я"
-                pattern="^[a-zA-Z]+\s[a-zA-Z]+$"
-                title="Ім'я користувача має складатися з двох слів, розділених пробілом."
-                onChange={handleChange}
+                onChange={(e) => handleChangeName(e)}
               />
-              <input
+
+              <InputMask
                 type="tel"
-                name="phone"
-                value={info.phone}
+                name="clientPhone"
+                value={clientPhone}
+                onChange={(e) => handleChangePhone(e)}
+                className={
+                  !!validationResult["phone"]
+                    ? `${css.userFormInput} ${css.inputError}`
+                    : css.userFormInput
+                }
                 required
-                placeholder="Tелефон"
-                pattern="+38[0-9]{10}"
-                title="Формат: +380671234567"
-                onChange={handleChange}
+                mask="+380\ 99 999 99 99"
+                maskChar=" "
+                alwaysShowMask
               />
+
+              <div className={css.errorMessageWrapper}>
+                {!!validationResult["name"] ? (
+                  <p className={css.errorMessage}>{validationResult["name"]}</p>
+                ) : (
+                  <p className={css.errorMessage}> </p>
+                )}
+
+                {!!validationResult["phone"] && (
+                  <p className={css.errorMessage}>
+                    {validationResult["phone"]}
+                  </p>
+                )}
+              </div>
+
+              <button
+                className={
+                  !isDisabled
+                    ? `${css.userFormButtonPay} ${css.iconActive}`
+                    : css.userFormButtonPay
+                }
+                type="submit"
+                disabled={isDisabled}
+              >
+                Придбати
+                <TbCheck
+                  className={
+                    !isDisabled
+                      ? `${css.coverButtonIcon} ${css.iconActive}`
+                      : css.coverButtonIcon
+                  }
+                />
+              </button>
             </form>
+
             <button
               className={css.userFormButtonCancel}
               type="button"
               onClick={handleCancel}
             >
               <TbArrowNarrowLeft className={css.coverButtonIcon} />
+              Скасувати
             </button>
-            <button
-              className={css.userFormButtonPay}
-              type="submit"
-              onSubmit={handleSubmit}
-            >
-              <FiCheckCircle
-                className={
-                  info.name && info.phone
-                    ? `${css.coverButtonIcon} ${css.iconActive}`
-                    : css.coverButtonIcon
-                }
-              />
-            </button>{" "}
           </>
         ) : (
           <></>
@@ -89,13 +192,3 @@ export default function FormWrapper({ cn }) {
     </div>
   );
 }
-
-/* <div className={css.userFormBtn}>         
-          <Button text="Придбати" />
-          <Button
-            style={{ color: "rgba(206, 206, 148, 0.323)" }}
-            type="button"
-            text="Скасувати"
-            onClick={handleCancel}
-          />
-        </div> */

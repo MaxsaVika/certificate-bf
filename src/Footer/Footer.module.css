@@ -1,13 +1,15 @@
 .footer{
-   position: absolute;
-   bottom: 0;
+   /* position: absolute;
+   bottom: 0; */
+   margin-top: 60px;
+   margin-bottom: 5px;
     background-color: transparent;
 }
 
 .footerWrapper{
     display: grid;
-    grid-template-columns: 65% auto;
-    grid-template-rows: 30% auto;
+    grid-template-columns: 55% auto;
+    /* grid-template-rows: 30% auto; */
     align-items: end;
     justify-content: space-evenly;
     align-content: center;
@@ -16,7 +18,7 @@
     row-gap: 5px;
 }
 
-.footerBlockLogo{
+.footerBlockLogo, .footerLogoWrapper{
     display: inline-flex;
     flex-direction: row;
     align-items:flex-end;
@@ -25,7 +27,7 @@
 .footerLogoImg{
     width: 30px;
     height: 30px;
-    margin-right: 10px;
+    margin-right: 5px;
 }
 
 .footerlogoName, .footerAddressTitle{
@@ -39,19 +41,27 @@
     font-weight: 400;
 }
 
-.footerDescr, .footerAddress a{
+.footerAddress a, .footerPhone a{
     font-size: 12px;
     font-family: 'Evolventa';
     color: #BDBAB8;
 }
 
-.footerAddress{
-    align-self: flex-start;
+.footerPhone{
+    display: flex;
+    justify-content: center;
+    align-items:flex-end;
+    gap: 10px;
+}
+
+.footerLocationIcon{
+    width: 16px;
+    height: 16px;
 }
 
 @media screen and (min-width:768px){
-    .footerDescr, .footerAddress a, .footerAddressTitle{
-        font-size: 14px;
+ .footerPhone a{
+        font-size: 16px;
     }
 
     .footerlogoName{
@@ -61,29 +71,43 @@
     .footerlogoAccent{
         font-size: 16px;
     }
+
+    .footerPhone{
+        gap: 20px;
+    }
+
+    .footerLocationIcon{
+        width: 20px;
+        height: 20px;
+    }
 }
 
 @media screen and (min-width:1366px){
-    .footerDescr, .footerAddress a{
+    .footerPhone a{
         font-size: 16px;
     }
-    /* .footerlogoName, .footerAddressTitle{
-        font-size: 20px;
-    } */
 
-    /* .footerlogoAccent{
-        font-size: 18px;
-    } */
+    .footerLogoWrapper{
+        justify-content: center;
+    }
 
     .footerWrapper{
-        grid-template-columns: 50% auto;
-        justify-content: center;
-        
+        grid-template-columns: 100%;
+        justify-content: center;    
+    }
+
+    .footerPhone, .footerAddress{
+        display: none;
+    }
+
+    .footerLocationIcon{
+        width: 22px;
+        height: 22px;
     }
 }
 
 @media screen and (min-width:1920px){
-    .footerDescr, .footerAddress a{
+    .footerDescr, .footerAddress a, .footerPhone a{
         font-size: 22px;
     }
     .footerlogoName, .footerAddressTitle{
@@ -93,12 +117,12 @@
     .footerlogoAccent{
         font-size: 20px;
     }
-
+/* 
     .footerWrapper{
         grid-template-columns: 40% auto;
         justify-content: center;
         
-    }
+    } */
 
     .footerLogoImg{
         width: 42px;
