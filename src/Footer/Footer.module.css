@@ -4,7 +4,7 @@
     background-color: transparent;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /* align-items: center; */
 }
 
 .footerWrapper{
@@ -66,6 +66,10 @@
 .politics a {
     color: inherit;
     text-decoration: underline;
+}
+
+.footerInfoLink{
+    margin-right: 5px;
 }
 
 @media screen and (max-width:768px){

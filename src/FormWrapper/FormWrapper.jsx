@@ -86,7 +86,7 @@ export default function FormWrapper({ cn }) {
     } finally {
       setClientName("");
       setClientPhone("");
-      setIsLoading(false);
+      // setIsLoading(false);
     }
   };
 
@@ -167,7 +167,6 @@ export default function FormWrapper({ cn }) {
                     Придбати <TbCheck className={css.coverButtonIcon} />{" "}
                   </>
                 )}
-                {/* {isLoading ? "Завантаження" : "Придбати"} */}
               </button>
             </form>
 

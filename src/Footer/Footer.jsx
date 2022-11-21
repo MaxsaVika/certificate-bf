@@ -53,6 +53,32 @@ export default function Footer() {
           в цих документах.
         </span>
       </div>
+
+      <div className={css.politics}>
+        <p>
+          "Body Factory Cтудія професійного масажу та догляду за тілом" ІПН
+          3538712232
+        </p>
+        <a
+          className={css.footerInfoLink}
+          href="https://goo.gl/maps/FwnA2U8h5pGoPJsg6"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          Львів, площа Князя Святослава, 5
+        </a>
+        <a
+          className={css.footerInfoLink}
+          href="tel:+380969189089"
+          rel="noreferrer"
+          target="_blank"
+        >
+          +38 096 918 90 89
+        </a>{" "}
+        <a href="mailto:bodyfactory@ukr.net" rel="noreferrer" target="_blank">
+          bodyfactory@ukr.net
+        </a>
+      </div>
     </footer>
   );
 }
