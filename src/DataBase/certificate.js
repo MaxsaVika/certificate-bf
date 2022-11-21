@@ -19,7 +19,7 @@ const cards = [
   },
   {
     key: 3,
-    id: 1,
+    id: 3,
     content: {
       img: "/images/certificates/certificate-23.jpg",
       title: "6 лікувальних масажів спини",
@@ -28,7 +28,7 @@ const cards = [
   },
   {
     key: 4,
-    id: 1,
+    id: 4,
     content: {
       img: "/images/certificates/certificate-24.jpg",
       title: "6 аромамасажів",
@@ -37,7 +37,7 @@ const cards = [
   },
   {
     key: 5,
-    id: 1,
+    id: 5,
     content: {
       img: "/images/certificates/certificate-25.jpg",
       title: "6 Лімфодренажних масажів",
@@ -46,7 +46,7 @@ const cards = [
   },
   {
     key: 6,
-    id: 1,
+    id: 6,
     content: {
       img: "/images/certificates/certificate-26.jpg",
       title: "6 Загально оздоровчих масажів",

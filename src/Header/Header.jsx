@@ -5,7 +5,7 @@ import css from "./Header.module.css";
 import {
   FaFacebookF,
   FaInstagram,
-  FaTelegramPlane,
+  // FaTelegramPlane,
   FaViber,
   FaPhoneAlt,
 } from "react-icons/fa";
@@ -23,7 +23,14 @@ export default function Header() {
         </Link>
       </div>
       <div className={css.socialContainer}>
-        <p className={css.socialPhone}>+38 096 918 90 89</p>
+        <a
+          className={css.socialPhone}
+          href="tel:+380969189089"
+          rel="noreferrer"
+          target="_blank"
+        >
+          +38 096 918 90 89
+        </a>
         <ul className={css.socialList}>
           <li className={css.socialItemMob}>
             <a href="tel:+380969189089" rel="noreferrer" target="_blank">
@@ -31,7 +38,7 @@ export default function Header() {
             </a>
           </li>
 
-          <li className={css.socialItemDesk}>
+          <li className={`${css.socialItemDesk} ${css.socialIconFb}`}>
             <a
               href="https://www.facebook.com/bodyfactory.ua/"
               rel="noreferrer"
@@ -51,19 +58,15 @@ export default function Header() {
             </a>
           </li>
 
-          <li className={css.socialItemDesk}>
-            <a
-              href="https://react-icons.github.io/react-icons"
-              rel="noreferrer"
-              target="_blank"
-            >
+          {/* <li className={css.socialItemDesk}>
+            <a href="https://t.me/MaxsaCEO" rel="noreferrer" target="_blank">
               <FaTelegramPlane className={css.socialIcon} />
             </a>
-          </li>
+          </li> */}
 
           <li className={css.socialItemDesk}>
             <a
-              href="https://react-icons.github.io/react-icons"
+              href="viber://chat?number=+380969189089"
               rel="noreferrer"
               target="_blank"
             >
@@ -75,27 +78,3 @@ export default function Header() {
     </div>
   );
 }
-
-// const iconNames = ["instagram", "facebook", "viber", "telegram"];
-
-// export default function Header() {
-//   return (
-//     <div className={css.Header}>
-//       <p className={css.logo}>BF</p>
-//       <div className={css.socialContainer}>
-//         <p>
-//           <FaPhoneAlt /> 067-123-45-67
-//         </p>
-//         <ul className={css.socialList}>
-//           {iconNames.map((iconName, i) => (
-//             <li key={i} className={css.socialItem}>
-//               <a href="https://react-icons.github.io/react-icons">
-//                 <SocialLinks iconName={iconName} styles={{ width: 16 }} />
-//               </a>
-//             </li>
-//           ))}
-//         </ul>
-//       </div>
-//     </div>
-//   );
-// }

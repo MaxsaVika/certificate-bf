@@ -21,7 +21,6 @@ function Card({
 }) {
   const [show, setShown] = useState(false);
   const { info, saveInfo } = useCertificate();
-  // const { saveInfo } = useCertificate();
 
   const props3 = useSpring({
     transform: show ? "scale(1.02)" : "scale(1)",
@@ -155,6 +154,20 @@ function Card({
         onMouseLeave={() => setShown(false)}
         onClick={(e) => handleClick(e)}
       >
+        {distanceFactor < 1 && (
+          <>
+            <div
+              className={`${css.arrow} ${css.arrowUp} ${
+                info.check && css.arrowHidden
+              }`}
+            />
+            <div
+              className={`${css.arrow} ${css.arrowDown} ${
+                info.check && css.arrowHidden
+              }`}
+            />
+          </>
+        )}
         <img src={img} alt={title} className={css.cardImg} />
 
         <div className={css.cardBtn}>

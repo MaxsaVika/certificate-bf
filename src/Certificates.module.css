@@ -3,11 +3,10 @@
   padding-right: 15px;
   margin-right: auto;
   margin-left: auto;
-  /* margin: 0 10px; */
 }
 
 .titleWrapper{
-  padding-top: 50px;
+  /* padding-top: 50px; */
   padding-bottom: 20px;
 }
 
@@ -17,13 +16,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Evolventa';
   font-weight: 700;
   font-size: 28px;
   letter-spacing: 1.3px;
   line-height: 35px;
   text-transform: uppercase;
-
   color: #FFFFFF;
   transition: 1s;
 }
@@ -38,19 +35,9 @@
   padding-top: 30px;
 }
 
-/* @media screen and (max-width: 767px) {
-  .title{
-    font-size: 52px;
-    line-height: 85px;
-    letter-spacing: 2px;
-    }
-
-} */
-
-
 @media screen and (min-width: 768px) {
   .titleWrapper{
-    padding-top: 100px;
+    /* padding-top: 100px; */
     padding-bottom: 80px;
   }
 
@@ -60,7 +47,6 @@
     line-height: 85px;
     letter-spacing: 2px;
     }
-
 }
 
 @media screen and (min-width: 1024px) {
@@ -71,7 +57,7 @@
 
 @media screen and (min-width: 1366px) {
   .titleWrapper{
-    padding-top: 20px;
+    /* padding-top: 20px; */
     padding-bottom: 70px;
   }
 
@@ -80,13 +66,13 @@
     font-size: 52px;
     line-height: 85px;
     letter-spacing: 2px;
-    }
+  }
 
 }
 
 @media screen and (min-width: 1920px) {
   .titleWrapper{
-    padding-top: 140px;
+    /* padding-top: 140px; */
     padding-bottom: 100px;
   }
 
@@ -94,42 +80,5 @@
     font-size: 64px;
     line-height: 85px;
     letter-spacing: 2px;
-    }
-    
-}
-
-@font-face {
-  font-family: 'Evolventa';
-  src: local('Evolventa-Bold'), local('Evolventa-Bold'),
-      url('./fonts/Evolventa/Evolventa-Bold.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Evolventa';
-  src: local('Evolventa-BoldObligue'), local('Evolventa-BoldObligue'),
-      url('./fonts/Evolventa/Evolventa-BoldOblique.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Evolventa';
-  src: local('Evolventa-Oblique'), local('Evolventa-Oblique'),
-      url('./fonts/Evolventa/Evolventa-Oblique.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Evolventa';
-  src: local('Evolventa-Regular'), local('Evolventa-Regular'),
-      url('./fonts/Evolventa/Evolventa-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
+    }    
 }

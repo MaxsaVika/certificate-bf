@@ -19,7 +19,7 @@
 .cardBtn{
   position: absolute;
   bottom: 5px;
-  right: 0;
+  right: 5px;
   display: flex;
   justify-content: flex-start;
   align-items: baseline;
@@ -51,8 +51,51 @@
   }
   
   .cardBtn{
-
     bottom: 10px;
-    right: 5px;
+    right: 10px;
+  }
+}
+
+.arrow {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  cursor: pointer;
+  opacity: 1;
+  transition: all 0.5s ease;
+}
+
+.arrowUp {
+  border-bottom: 25px solid yellow;
+  top: 2rem;
+}
+
+.arrowDown {
+  border-top: 25px solid yellow;
+  bottom: 2rem;
+}
+
+.arrowHidden {
+  opacity: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .arrow {
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+  }
+
+  .arrowUp {
+    border-bottom: 15px solid yellow;
+    top: 1rem;
+  }
+
+  .arrowDown {
+    border-top: 15px solid yellow;
+    bottom: 1rem;
   }
 }

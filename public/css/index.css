@@ -6,7 +6,7 @@ body {
   /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif; */
-    font-family: -apple-system, BlinkMacSystemFont, 'Evolventa',
+    font-family: 'Evolventa', -apple-system, BlinkMacSystemFont,
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -40,7 +40,7 @@ a{
 @font-face {
   font-family: 'Evolventa';
   src: local('Evolventa-Bold'), local('Evolventa-Bold'),
-      url('./fonts/Evolventa/Evolventa-Bold.ttf') format('truetype');
+      url('../fonts/Evolventa/Evolventa-Bold.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -49,7 +49,7 @@ a{
 @font-face {
   font-family: 'Evolventa';
   src: local('Evolventa-BoldObligue'), local('Evolventa-BoldObligue'),
-      url('./fonts/Evolventa/Evolventa-BoldOblique.ttf') format('truetype');
+      url('../fonts/Evolventa/Evolventa-BoldOblique.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -58,7 +58,7 @@ a{
 @font-face {
   font-family: 'Evolventa';
   src: local('Evolventa-Oblique'), local('Evolventa-Oblique'),
-      url('./fonts/Evolventa/Evolventa-Oblique.ttf') format('truetype');
+      url('../fonts/Evolventa/Evolventa-Oblique.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -67,7 +67,7 @@ a{
 @font-face {
   font-family: 'Evolventa';
   src: local('Evolventa-Regular'), local('Evolventa-Regular'),
-      url('./fonts/Evolventa/Evolventa-Regular.ttf') format('truetype');
+      url('../fonts/Evolventa/Evolventa-Regular.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;

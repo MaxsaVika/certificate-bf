@@ -9,8 +9,8 @@
 }
 
 .socialIcon{
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
     fill: #FFFFFF;
 }
 
@@ -18,8 +18,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    /* width: 40px; */
     transition: transform 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+    width: 26px;
+    height: 26px;
+    /* border: 1px solid rgba(128, 128, 128, 0.56); */
+    padding: 3px;
 }
 
 .socialItem:hover, .socialItemDesk:hover{
@@ -28,7 +32,6 @@
 
 .socialPhone{
     margin-right: 20px;
-    font-family: 'Evolventa';
     font-style: normal;
     font-size: 20px;
     line-height: 27px;
@@ -47,7 +50,6 @@
 
 .logoName{
     margin-left: 20px;
-    font-family: 'Evolventa';
     font-style: normal;
     font-size: 22px;
     line-height: 32px;
@@ -68,11 +70,16 @@
 .socialList{
     display: flex;
     align-items: center;
-    gap: 26px;
+    /* gap: 26px; */
+    gap: 12px;
 }
 
 @media screen and (max-width:767px){
-    .logoName, .socialPhone, .socialItemDesk {
+    /* .logoName, .socialPhone, .socialItemDesk {
+        display: none;
+    } */
+
+    .logoName, .socialPhone, .socialIconFb {
         display: none;
     }
 }

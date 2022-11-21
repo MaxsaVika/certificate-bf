@@ -17,7 +17,6 @@
   border-radius: 6px;
 
   transform: translateX(-100%);
-  /* transition: transform 1500ms ease-in-out; */
   transition: transform 1200ms cubic-bezier(.45,-0.23,.42,.94);
   z-index: 1000;
 }
@@ -46,9 +45,9 @@
 
 .userFormInput{
   width: 50%;
-  font-family: 'Evolventa';
   font-size: 12px;
   font-weight: 500;
+  font-family: 'Evolventa';
   color: rgba(248, 211, 47, 0.9);
   border: none;
   border-bottom: 1px solid rgba(248, 211, 47, 0.9);
@@ -56,8 +55,8 @@
 }
 
 .userFormInput::placeholder{
-  font-family: 'Evolventa';
   font-size: 12px;
+  font-family: 'Evolventa';
   color: rgba(206, 206, 148, 0.323);
 }
 
@@ -79,7 +78,6 @@
 
 .errorMessage{
   width: 50%;
-  font-family: 'Evolventa';
   color: rgb(239, 89, 89);
   font-size: 8px;
 }
@@ -92,14 +90,15 @@
   justify-content: flex-start;
   padding: 5px;
 
-  font-family: 'Evolventa';
   font-size: 12px;
   font-weight: 400;
+  font-family: 'Evolventa';
   color: rgb(131, 127, 108);
   background-color: transparent;
   border-radius: 4px;
-  border: none;
+  border: 1px solid transparent;
   cursor: pointer;
+  transition: all 250ms linear;
 }
 
 .coverButtonIcon{ 
@@ -107,7 +106,6 @@
   height: 18px;
   margin-left: 5px;
   margin-right: 5px;
-  color:rgb(131, 127, 108);
 }
 
 .iconActive{
@@ -115,20 +113,39 @@
 }
 
 .userFormButtonCancel{
-  left: 5px;
-  bottom: 5px;
+  padding-right: 10px;
+  left: 16px;
+  bottom: 10px;
 }
 
 .userFormButtonPay{
-  bottom: 5px;
-  /* right: 0; */
-  right: -10%;
+  padding-left: 10px;
+  bottom: 10px;
+  right: -20px;
+  border: 1px solid rgb(248, 211, 47);
+  color: rgb(248, 211, 47);
+}
+
+.userFormButtonPay:disabled,
+.userFormButtonPay[disabled] {
+  border: 1px solid transparent;
+  color: rgb(131, 127, 108);
+}
+
+.userFormButtonPay:disabled:hover,
+.userFormButtonPay[disabled]:hover {
+  border: 1px solid transparent;
+  background-color: initial;
+  color: rgb(131, 127, 108);
+  box-shadow: initial;
 }
 
 .userFormButtonCancel:hover, .userFormButtonPay:hover{
-  border: 1px solid rgba(224, 209, 143, 0.2);
+  border: 1px solid transparent;
+  background-color: rgb(248, 211, 47);
+  color: #ffffff;
   box-shadow: rgb(226 214 214 / 15%) 0px 2px 8px;
-  transform: scale(1.15);
+  /* transform: scale(1.15); */
 }
 
 @media screen and (min-width: 768px) {
@@ -158,12 +175,13 @@
   }
 
   .userFormButtonCancel{
-    left: 10px;
-    bottom: 10px;
+    left: 30px;
+    bottom: 20px;
   }
   
   .userFormButtonPay{
-    bottom: 10px;
+    bottom: 20px;
+    right: -8%;
   }
 }
 
@@ -184,7 +202,4 @@
     font-size: 12px;
   }
 
-  .userFormButtonCancel{
-    left: 16px;
-  }
 }

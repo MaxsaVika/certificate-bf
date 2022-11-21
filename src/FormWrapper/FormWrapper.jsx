@@ -5,6 +5,7 @@ import css from "./FormWrapper.module.css";
 import InputMask from "react-input-mask";
 import { useDrag } from "@use-gesture/react";
 import { useValidation } from "../hooks/useValidation";
+import BarLoader from "react-spinners/BarLoader";
 
 export default function FormWrapper({ cn }) {
   const { info, saveInfo } = useCertificate();
@@ -18,6 +19,7 @@ export default function FormWrapper({ cn }) {
     name: "",
     phone: "",
   });
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleChangeName = (e) => setClientName(e.target.value);
   const handleChangePhone = (e) => setClientPhone(e.target.value);
@@ -54,15 +56,10 @@ export default function FormWrapper({ cn }) {
       return;
     }
 
-    setError(null);
-
-    // saveInfo({
-    //   ...info,
-    //   name: clientName,
-    //   phone: clientPhone.replace(/\s/g, "").slice(1),
-    // });
-
     try {
+      setError(null);
+      setIsLoading(true);
+
       const response = await fetch("https://tsless.vercel.app/api/", {
         method: "POST",
         body: JSON.stringify({
@@ -79,7 +76,7 @@ export default function FormWrapper({ cn }) {
       if ("url" in responseJSON) {
         const url = responseJSON.url;
 
-        window.location.replace(url);
+        window.open(url, "_self");
       } else {
         setError(error);
       }
@@ -89,10 +86,9 @@ export default function FormWrapper({ cn }) {
     } finally {
       setClientName("");
       setClientPhone("");
+      setIsLoading(false);
     }
   };
-
-  console.log("info", info);
 
   const bind = useDrag(
     ({ active, movement: [mx], direction: [xDir], cancel }) => {
@@ -157,22 +153,21 @@ export default function FormWrapper({ cn }) {
               </div>
 
               <button
-                className={
-                  !isDisabled
-                    ? `${css.userFormButtonPay} ${css.iconActive}`
-                    : css.userFormButtonPay
-                }
+                className={css.userFormButtonPay}
                 type="submit"
-                disabled={isDisabled}
+                disabled={isDisabled || isLoading}
               >
-                Придбати
-                <TbCheck
-                  className={
-                    !isDisabled
-                      ? `${css.coverButtonIcon} ${css.iconActive}`
-                      : css.coverButtonIcon
-                  }
-                />
+                {isLoading ? (
+                  <BarLoader
+                    color="rgb(248, 211, 47)"
+                    className={css.coverButtonIcon}
+                  />
+                ) : (
+                  <>
+                    Придбати <TbCheck className={css.coverButtonIcon} />{" "}
+                  </>
+                )}
+                {/* {isLoading ? "Завантаження" : "Придбати"} */}
               </button>
             </form>
 

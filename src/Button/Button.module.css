@@ -1,26 +1,18 @@
 .btn {
-  /* padding: 6px 8px; */
-  /* width: 80px; */
   display: flex;
   justify-content: center;
   align-items: center;
 
-  /* font-size: 12px; */
-  /* font-weight: 600; */
-  /* font-family: 'Evolventa'; */
   background-color: transparent;
   color: rgba(248, 211, 47, 0.9);
-
   border: none;
   outline: none;
-  /* border-radius: 50%;  */
   border-radius: 6px; 
   cursor: pointer;
-  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
   .btn:hover{
-    /* background-color:rgba(224, 209, 143, 0.2); */
     border: 1px solid rgba(224, 209, 143, 0.2);
     box-shadow: rgb(226 214 214 / 15%) 0px 2px 8px;
     transform: scale(1.15);

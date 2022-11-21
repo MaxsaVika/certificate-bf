@@ -3,7 +3,6 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import css from "./App.module.css";
 
 import Layout from "./Layout/Layout.jsx";
-import FailedPage from "./pages/FailedPage.jsx";
 import HomePage from "./pages/HomePage.jsx";
 import SuccessPage from "./pages/SuccessPage.jsx";
 
@@ -14,7 +13,6 @@ const App = () => {
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
           {/* <Route path="/checkout/success" element={<SuccessPage />} /> */}
-          <Route path="/checkout/failed" element={<FailedPage />} />
         </Route>
         <Route path="/checkout/success" element={<SuccessPage />} />
         <Route path="*" element={<Navigate to="/" />} />
