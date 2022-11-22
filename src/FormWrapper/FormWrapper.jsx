@@ -63,9 +63,9 @@ export default function FormWrapper({ cn }) {
       const response = await fetch("https://tsless.vercel.app/api/", {
         method: "POST",
         body: JSON.stringify({
-          amount: 1,
+          amount: info.price,
           orderDescription: info.title,
-          orderId: info.id,
+          orderId: `${info.id}_${new Date().getTime()}`,
           name: clientName,
           phone: clientPhone,
         }),
@@ -86,7 +86,7 @@ export default function FormWrapper({ cn }) {
     } finally {
       setClientName("");
       setClientPhone("");
-      // setIsLoading(false);
+      setIsLoading(false);
     }
   };
 

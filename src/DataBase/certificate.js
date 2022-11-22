@@ -68,7 +68,7 @@ const cards = [
     content: {
       img: "/images/certificates/certificate-gift-500.jpg",
       title: "Подарунковий сертифікат номіналом 500грн",
-      price: "500",
+      price: "425",
     },
   },
   {
@@ -77,7 +77,7 @@ const cards = [
     content: {
       img: "/images/certificates/certificate-gift-1000.jpg",
       title: "Подарунковий сертифікат номіналом 1000грн",
-      price: "1000",
+      price: "850",
     },
   },
   {
@@ -86,7 +86,7 @@ const cards = [
     content: {
       img: "/images/certificates/certificate-gift-2000.jpg",
       title: "Подарунковий сертифікат номіналом 2000грн",
-      price: "2000",
+      price: "1700",
     },
   },
 ];
