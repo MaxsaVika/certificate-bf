@@ -15,7 +15,6 @@
 
   box-sizing: border-box;
   border-radius: 6px;
-
   transform: translateX(-100%);
   transition: transform 1200ms cubic-bezier(.45,-0.23,.42,.94);
   z-index: 1000;
@@ -36,7 +35,6 @@
   width: 80%;
   position: absolute;
   top: 10%;
-
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -48,21 +46,22 @@
   font-size: 12px;
   font-weight: 500;
   font-family: 'Evolventa';
-  color: rgba(248, 211, 47, 0.9);
+  color: var(--main-accent-color);
   border: none;
-  border-bottom: 1px solid rgba(248, 211, 47, 0.9);
+  border-bottom: 2px solid var(--main-accent-color);
   background: transparent;
+  outline: none;
 }
 
 .userFormInput::placeholder{
   font-size: 12px;
   font-family: 'Evolventa';
-  color: rgba(206, 206, 148, 0.323);
+  color: var(--cover-placeholder-color);
 }
 
 .inputError{
-  color: rgb(239, 89, 89);
-  border-bottom: 1px solid rgb(239, 89, 89);
+  color: var(--error-color);
+  border-bottom: 1px solid var(--error-color);
 }
 
 .errorMessageWrapper{
@@ -70,16 +69,33 @@
   display: flex;
   position: absolute;
   top: 10%;
-
   justify-content: flex-start;
-  align-items: center;
   gap: 20px;
 }
 
 .errorMessage{
   width: 50%;
-  color: rgb(239, 89, 89);
+  color: var(--error-color);
   font-size: 8px;
+}
+
+.coverTitleWrappper{
+  position: absolute;
+  width: 90%;
+  top: 30%;
+  text-align: center;
+}
+
+.coverTitle{
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--main-text-color);
+}
+
+.coverSubTitlePrice{
+  font-size: 12px;
+  color:var(--main-accent-color);
+  font-weight: 400;
 }
 
 .userFormButtonCancel, .userFormButtonPay{
@@ -93,7 +109,7 @@
   font-size: 12px;
   font-weight: 400;
   font-family: 'Evolventa';
-  color: rgb(131, 127, 108);
+  color: var(--cover-btn-text-color);
   background-color: transparent;
   border-radius: 4px;
   border: 1px solid transparent;
@@ -109,7 +125,8 @@
 }
 
 .iconActive{
-  color:rgba(248, 211, 47, 0.9);
+  color:var(--main-accent-color);
+  /* color:rgba(248, 211, 47, 0.9); */
 }
 
 .userFormButtonCancel{
@@ -122,31 +139,35 @@
   padding-left: 10px;
   bottom: 10px;
   right: -20px;
-  border: 1px solid rgb(248, 211, 47);
-  color: rgb(248, 211, 47);
+  border: 1px solid var(--main-accent-color);
+  color: var(--main-accent-color);
 }
 
 .userFormButtonPay:disabled,
 .userFormButtonPay[disabled] {
   border: 1px solid transparent;
-  color: rgb(131, 127, 108);
+  color: var(--cover-btn-text-color);
 }
 
 .userFormButtonPay:disabled:hover,
 .userFormButtonPay[disabled]:hover {
   border: 1px solid transparent;
   background-color: initial;
-  color: rgb(131, 127, 108);
+  color: var(--cover-btn-text-color);
   box-shadow: initial;
 }
 
 .userFormButtonCancel:hover, .userFormButtonPay:hover{
   border: 1px solid transparent;
-  background-color: rgb(248, 211, 47);
-  /* color: #ffffff; */
-  color: black;
+  background-color: var(--main-accent-color);
+  color: var(--main-bg-color);
   box-shadow: rgb(226 214 214 / 15%) 0px 2px 8px;
-  /* transform: scale(1.15); */
+}
+
+@media screen and (max-width: 500px) {
+  .formWrapper{
+    width: 100%;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -162,8 +183,20 @@
     font-size: 22px;
   }
 
+  .errorMessageWrapper{
+    top: 10%;
+  }
+
   .errorMessage{
     font-size: 10px;
+  }
+
+  .coverTitle{
+    font-size: 22px;
+  }
+  
+  .coverSubTitlePrice{
+    font-size: 22px;
   }
 
   .userFormButtonCancel, .userFormButtonPay{
@@ -186,11 +219,17 @@
   }
 }
 
+/* @media screen and (max-width: 1365px) {
+  .formWrapper{
+    width: 100%;
+  }
+} */
+
 @media screen and (min-width: 1366px) {
   .formWrapper{
     transform: translateX(-120%);
-  
   }
+
   .userFormInput{
     font-size: 26px;
   }
@@ -203,4 +242,32 @@
     font-size: 12px;
   }
 
+}
+
+.userFormAdviceSelectWrapper{
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.userFormAdviceSelectLabel{
+  margin-bottom: 5px;
+  font-size: 12px;
+  color: var(--main-text-color);
+}
+
+.userFormAdviceSelect{
+  text-align: center;
+  background: transparent;
+  font-size: 14px;
+  color: var(--main-text-color);
+  border: none;
+  border-bottom: 1px solid var(--main-text-color);
+  cursor: pointer;
+}
+
+.userFormAdviceSelect:focus{
+  outline: 0;
+  outline-offset: 0;
 }

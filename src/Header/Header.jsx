@@ -1,7 +1,6 @@
 import React from "react";
 import css from "./Header.module.css";
 
-// import SocialLinks from "../DataBase/SocialLinks";
 import {
   FaFacebookF,
   FaInstagram,
@@ -9,19 +8,15 @@ import {
   FaViber,
   FaPhoneAlt,
 } from "react-icons/fa";
-import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
     <div className={css.Header}>
-      <div style={{ display: "flex", alignItems: "center" }}>
-        <Link to="/" className={css.headerLogo}>
-          <img src="/images/logo.png" alt="BF" className={css.logoImg} />
-          <h2 className={css.logoName}>
-            BODY FACTORY \ <span className={css.logoAccent}>BLACK FRIDAY</span>
-          </h2>
-        </Link>
+      <div className={css.headerLogo}>
+        <img src="/images/logo.png" alt="BF" className={css.logoImg} />
+        <h2 className={css.logoName}>BODY FACTORY</h2>
       </div>
+
       <div className={css.socialContainer}>
         <a
           className={css.socialPhone}

@@ -69,7 +69,8 @@
       style="
         height: 100vh;
         padding: 15px;
-        background: #1d1d1df7;
+        background: var(--main-bg-color);
+        /* background: #1d1d1df7; */
         display: flex;
         justify-content: center;
         flex-direction: column;
@@ -88,7 +89,8 @@
         <h3
           style="
             padding-right: 5px;
-            color: #fff;
+            color: var(--main-text-color);
+            /* color: #fff; */
             font-size: 24px;
             font-weight: 600;
             font-style: normal;
@@ -105,7 +107,8 @@
           flex-direction: column;
           margin-bottom: 40px;
           margin-top: 10px;
-          color: #fff;
+          color: var(--main-text-color);
+          /* color: #fff; */
           max-width: 500px;
           font-size: 18px;
           font-style: normal;
@@ -131,7 +134,8 @@
             <a
               style="
                 font-size: 16px;
-                color: rgb(198, 198, 97);
+                color: var(--main-accent-color);
+                /* color: rgb(198, 198, 97); */
                 text-decoration: underline;
               "
               href="/"
@@ -156,12 +160,12 @@
             </p>
           </div>
 
-          <div style="padding: 3px 0">
+          <!-- <div style="padding: 3px 0">
             <h4>Акція -</h4>
             <p style="font-size: 16px">
               символічний привід розпродажу “Чорна пʼятниця”.
             </p>
-          </div>
+          </div> -->
         </div>
 
         <div>
@@ -187,9 +191,14 @@
             буде скеровано після вибору Товару.
           </p>
 
-          <p style="padding: 3px 0">
+          <!-- <p style="padding: 3px 0">
             Продавець залишає за собою право змінювати ціни впродовж акції, але
             це не розповсюджується на раніше придбаний Товар.
+          </p> -->
+
+          <p style="padding: 3px 0">
+            Продавець залишає за собою право змінювати ціни, але це не
+            розповсюджується на раніше придбаний Товар.
           </p>
 
           <p style="padding: 3px 0">
@@ -200,17 +209,17 @@
           </p>
         </div>
 
-        <div>
+        <!-- <div>
           <h3 style="margin-bottom: 5px">4) Термін акції</h3>
 
           <p>
             Акція має обмежений строк проведення: початок Акції в 0:00
             21.11.2022 і закінчення о 23:59 25.11.2022
           </p>
-        </div>
+        </div> -->
 
         <div>
-          <h3 style="margin-bottom: 5px">5) Доставка товару</h3>
+          <h3 style="margin-bottom: 5px">4) Доставка товару</h3>
 
           <p style="padding: 3px 0">
             Товар дійсний, як в електронному вигляді так і в звичайному
@@ -231,7 +240,7 @@
         </div>
 
         <div>
-          <h3 style="margin-bottom: 5px">6) Строки дії</h3>
+          <h3 style="margin-bottom: 5px">5) Строки дії</h3>
           <p>
             Товар діє обмежений строк - 6 місяців і він починається від моменту
             оплати.
@@ -239,7 +248,7 @@
         </div>
 
         <div>
-          <h3 style="margin-bottom: 5px">7) Умови гарантії</h3>
+          <h3 style="margin-bottom: 5px">6) Умови гарантії</h3>
 
           <p>
             Продавець завчасно потурбувався, щоб при будь яких нетипових умовах
@@ -250,7 +259,7 @@
         </div>
 
         <div>
-          <h3 style="margin-bottom: 5px">8) Використання персональних даних</h3>
+          <h3 style="margin-bottom: 5px">7) Використання персональних даних</h3>
 
           <p>
             Продавець збирає персональні дані у вигляді імені і номеру телефону
@@ -267,7 +276,8 @@
           margin-top: 30px;
           margin-bottom: 40px;
           gap: 10px;
-          color: white;
+          color: var(--second-text-color);
+          /* color: white; */
         "
       >
         <h4>Чекаємо Вас у студії масажу BODY FACTORY</h4>
@@ -282,11 +292,11 @@
           border-radius: 6px;
           border: none;
           background-color: transparent;
-          box-shadow: rgba(200, 200, 200, 0.25) 0px 54px 55px,
-            rgba(200, 200, 200, 0.12) 0px -12px 30px,
-            rgba(200, 200, 200, 0.12) 0px 4px 6px,
-            rgba(200, 200, 200, 0.17) 0px 12px 13px,
-            rgba(200, 200, 200, 0.09) 0px -3px 5px;
+          box-shadow: rgba(200, 200, 200, 0.35) 0px 54px 55px,
+            rgba(200, 200, 200, 0.22) 0px -12px 30px,
+            rgba(200, 200, 200, 0.22) 0px 4px 6px,
+            rgba(200, 200, 200, 0.27) 0px 12px 13px,
+            rgba(200, 200, 200, 0.19) 0px -3px 5px;
         "
       >
         <a
@@ -294,7 +304,8 @@
           style="
             text-decoration: none;
             font-size: 14px;
-            color: rgb(198, 198, 97);
+            color: var(--main-accent-color);
+            /* color: rgb(198, 198, 97); */
             text-transform: uppercase;
           "
           >На головну</a

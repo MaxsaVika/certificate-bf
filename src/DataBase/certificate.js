@@ -1,94 +1,134 @@
-const cards = [
-  {
-    key: 1,
-    id: 1,
-    content: {
-      img: "/images/certificates/certificate-21.jpg",
-      title: "Корекція фігури Основна (10 сеансів)",
-      price: "4480",
-    },
-  },
-  {
-    key: 2,
-    id: 2,
-    content: {
-      img: "/images/certificates/certificate-22.jpg",
-      title: "Корекція фігури Експрес (6 сеансів)",
-      price: "2730",
-    },
-  },
-  {
-    key: 3,
-    id: 3,
-    content: {
-      img: "/images/certificates/certificate-23.jpg",
-      title: "6 лікувальних масажів спини",
-      price: "2137",
-    },
-  },
-  {
-    key: 4,
-    id: 4,
-    content: {
-      img: "/images/certificates/certificate-24.jpg",
-      title: "6 аромамасажів",
-      price: "4500",
-    },
-  },
-  {
-    key: 5,
-    id: 5,
-    content: {
-      img: "/images/certificates/certificate-25.jpg",
-      title: "6 Лімфодренажних масажів",
-      price: "3150",
-    },
-  },
-  {
-    key: 6,
-    id: 6,
-    content: {
-      img: "/images/certificates/certificate-26.jpg",
-      title: "6 Загально оздоровчих масажів",
-      price: "3037",
-    },
-  },
-  {
-    key: 7,
-    id: 7,
-    content: {
-      img: "/images/certificates/certificate-27.jpg",
-      title: "6 Масажів м’язове відновлення",
-      price: "2925",
-    },
-  },
-  {
-    key: 8,
-    id: 8,
-    content: {
-      img: "/images/certificates/certificate-gift-500.jpg",
-      title: "Подарунковий сертифікат номіналом 500грн",
-      price: "425",
-    },
-  },
-  {
-    key: 9,
-    id: 9,
-    content: {
-      img: "/images/certificates/certificate-gift-1000.jpg",
-      title: "Подарунковий сертифікат номіналом 1000грн",
-      price: "850",
-    },
-  },
-  {
-    key: 10,
-    id: 10,
-    content: {
-      img: "/images/certificates/certificate-gift-2000.jpg",
-      title: "Подарунковий сертифікат номіналом 2000грн",
-      price: "1700",
-    },
-  },
-];
+// const cards = [
+//   {
+//     key: 1,
+//     id: 1,
+//     typeOfCertificate: 1,
+//     content: {
+//       title: "Корекція фігури Основна",
+//       titleFull: "Курс Корекція фігури Основна з 10 сеансів масажу",
+//       titleOne: "1 сеанс масажу з курсу Корекція фігури Основна",
+//       price: "6080",
+//       priceOne: "640",
+//       amount: 10,
+//     },
+//   },
+//   {
+//     key: 2,
+//     id: 2,
+//     typeOfCertificate: 1,
+//     content: {
+//       title: "Корекція фігури Експрес",
+//       titleFull: "Курс Корекція фігури Експрес з 6 сеансів",
+//       titleOne: "1 сеанс масажу з курсу Корекція фігури Експрес",
+//       price: "3705",
+//       priceOne: "650",
+//       amount: 6,
+//     },
+//   },
+//   {
+//     key: 3,
+//     id: 3,
+//     typeOfCertificate: 1,
+//     content: {
+//       title: "Лікувальний масаж спини",
+//       titleFull: "Курс Лікувальний масаж спини з 6 сеансів",
+//       titleOne: "1 сеанс з курсу Лікувальний масаж спини",
+//       price: "2705",
+//       priceOne: "475",
+//       amount: 6,
+//     },
+//   },
+//   {
+//     key: 4,
+//     id: 4,
+//     typeOfCertificate: 1,
+//     content: {
+//       title: "Аромамасаж",
+//       titleFull: "Курс Аромамасаж з 6 сеансів",
+//       titleOne: "1 сеанс з курсу Аромамасаж",
+//       price: "5700",
+//       priceOne: "1000",
+//       amount: 6,
+//     },
+//   },
+//   {
+//     key: 5,
+//     id: 5,
+//     typeOfCertificate: 1,
+//     content: {
+//       title: "Лімфодренажний масаж",
+//       titleFull: "Курс Лімфодренажний масаж з 6 сеансів",
+//       titleOne: "1 сеанс з курсу Лімфодренажний масаж",
+//       price: "3990",
+//       priceOne: "700",
+//       amount: 6,
+//     },
+//   },
+//   {
+//     key: 6,
+//     id: 6,
+//     typeOfCertificate: 1,
+//     content: {
+//       title: "Загально оздоровчий масаж",
+//       titleFull: "Курс Загально оздоровчий масаж з 6 сеансів",
+//       titleOne: "1 сеанс з курсу Загально оздоровчий масаж",
+//       price: "3845",
+//       priceOne: "675",
+//       amount: 6,
+//     },
+//   },
+//   {
+//     key: 7,
+//     id: 7,
+//     typeOfCertificate: 1,
+//     content: {
+//       title: "Масаж м’язове відновлення",
+//       titleFull: "Курс масажів М’язове відновлення з 6 сеансів",
+//       titleOne: "1 сеанс масажу з курсу М’язове відновлення",
+//       price: "3705",
+//       priceOne: "650",
+//       amount: 6,
+//     },
+//   },
+//   {
+//     key: 8,
+//     id: 8,
+//     typeOfCertificate: 2,
+//     content: {
+//       title: "500",
+//       titleFull: "Подарунковий сертифікат номіналом 500грн",
+//       titleOne: "",
+//       price: "490",
+//       priceOne: null,
+//       amount: null,
+//     },
+//   },
+//   {
+//     key: 9,
+//     id: 9,
+//     typeOfCertificate: 2,
+//     content: {
+//       title: "1000",
+//       titleFull: "Подарунковий сертифікат номіналом 1000грн",
+//       titleOne: "",
+//       price: "980",
+//       priceOne: null,
+//       amount: null,
+//     },
+//   },
+//   {
+//     key: 10,
+//     id: 10,
+//     typeOfCertificate: 2,
+//     content: {
+//       title: "2000",
+//       titleFull: "Подарунковий сертифікат номіналом 2000грн",
+//       titleOne: "",
+//       price: "1960",
+//       priceOne: null,
+//       amount: null,
+//     },
+//   },
+// ];
 
-export default cards;
+// export default cards;

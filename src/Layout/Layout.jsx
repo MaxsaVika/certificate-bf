@@ -10,8 +10,6 @@ export default function Layout() {
         <Header />
       </header>
       <main style={{ display: "flex", alignItems: "center" }}>
-        {/* <main style={{ height: "100%", display: "flex", alignItems: "center" }}> */}
-        {/* <main> */}
         <Outlet />
       </main>
       <Footer />

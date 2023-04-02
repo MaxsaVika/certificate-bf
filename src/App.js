@@ -12,7 +12,6 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
-          {/* <Route path="/checkout/success" element={<SuccessPage />} /> */}
         </Route>
         <Route path="/checkout/success" element={<SuccessPage />} />
         <Route path="*" element={<Navigate to="/" />} />

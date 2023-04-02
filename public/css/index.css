@@ -1,8 +1,37 @@
+/* BLACK FRIDAY Theme */
+/* :root{
+  --main-bg-color: #272727;
+  --main-text-color: #fff;
+  --second-text-color: #BDBAB8;
+  --main-accent-color: #f8bf00;
+  --second-accent-color: #d88d02;
+  --card-img-color: #000000;
+  --error-color: rgb(239, 89, 89);
+  --cover-placeholder-color: rgba(206, 206, 148, 0.323);
+  --cover-btn-text-color: rgb(131, 127, 108);
+  --footer-info-color: rgba(255, 255, 255, 0.5);
+} */
+
+/* BF-site Theme */
+:root{
+  --main-bg-color: #e7e7e7;
+  --main-text-color: rgb(115, 115, 114);
+  --second-text-color: rgb(57, 57, 57);
+  --main-accent-color: #f8bf00;
+  --second-accent-color: #d88d02;
+  --card-img-color: #fff;
+  --error-color: rgb(239, 89, 89);
+  --cover-placeholder-color: rgba(131, 127, 108, 0.595);
+  --cover-btn-text-color: rgb(131, 127, 108);
+  --footer-info-color: rgba(115, 115, 114, 0.8);
+}
+
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color:  #272727;
+  /* background-color:  #272727; */
+  background-color:  var(--main-bg-color);
   /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif; */
@@ -28,6 +57,10 @@ p, h1, h2, h3, h4, button {
   margin: 0;
 }
 
+/* h1, h2{
+  font-weight: 400;
+} */
+
 img{
   display: block;
 }
@@ -37,10 +70,13 @@ a{
 }
 
 
+
+
 @font-face {
   font-family: 'Evolventa';
   src: local('Evolventa-Bold'), local('Evolventa-Bold'),
       url('../fonts/Evolventa/Evolventa-Bold.ttf') format('truetype');
+  /* font-weight: 600; */
   font-weight: 400;
   font-style: normal;
   font-display: swap;

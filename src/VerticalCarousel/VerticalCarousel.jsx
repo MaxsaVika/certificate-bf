@@ -81,8 +81,15 @@ class VerticalCarousel extends Component {
           <Card
             key={card.key}
             title={card.content.title}
+            colorTitle={card.colorTitle}
+            subTitle={card.content.subTitle}
+            titleOne={card.content.titleOne}
+            titleFull={card.content.titleFull}
+            image={card.content.image}
             price={card.content.price}
-            img={card.content.img}
+            priceOne={card.content.priceOne}
+            amount={card.content.amount}
+            type={card.typeOfCertificate}
             moveSlide={this.moveSlide}
             offsetRadius={this.clampOffsetRadius(offsetRadius)}
             index={presentableIndex}

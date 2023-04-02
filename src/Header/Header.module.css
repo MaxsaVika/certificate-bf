@@ -11,7 +11,7 @@
 .socialIcon{
     width: 20px;
     height: 20px;
-    fill: #FFFFFF;
+    fill: var(--main-text-color);
 }
 
 .socialItem, .socialItemMob, .socialItemDesk{
@@ -22,7 +22,6 @@
 
     width: 26px;
     height: 26px;
-    /* border: 1px solid rgba(128, 128, 128, 0.56); */
     padding: 3px;
 }
 
@@ -35,7 +34,7 @@
     font-style: normal;
     font-size: 20px;
     line-height: 27px;
-    color: #BDBAB8;
+    color: var(--second-text-color);
 }
 
 .headerLogo{
@@ -54,7 +53,7 @@
     font-size: 22px;
     line-height: 32px;
     letter-spacing: -0.3px;
-    color: #FFFFFF;
+    color: var(--main-text-color);
 }
 
 .logoAccent{
@@ -70,15 +69,10 @@
 .socialList{
     display: flex;
     align-items: center;
-    /* gap: 26px; */
     gap: 12px;
 }
 
 @media screen and (max-width:767px){
-    /* .logoName, .socialPhone, .socialItemDesk {
-        display: none;
-    } */
-
     .logoName, .socialPhone, .socialIconFb {
         display: none;
     }

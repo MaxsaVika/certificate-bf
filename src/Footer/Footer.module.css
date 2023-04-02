@@ -4,7 +4,6 @@
     background-color: transparent;
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
 }
 
 .footerWrapper{
@@ -32,7 +31,7 @@
 
 .footerlogoName, .footerAddressTitle{
     font-size: 12px;
-    color: #fff;
+    color: var(--main-text-color);
 }
 
 .footerlogoAccent{
@@ -42,7 +41,7 @@
 
 .footerAddress a, .footerPhone a{
     font-size: 12px;
-    color: #BDBAB8;
+    color: var(--second-text-color);
 }
 
 .footerPhone{
@@ -59,7 +58,7 @@
 
 .politics {
     font-size: 0.7rem;
-    color: rgba(255, 255, 255, 0.5);
+    color: var(--footer-info-color);
     text-align: center;
 }
 

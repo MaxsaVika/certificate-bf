@@ -17,45 +17,69 @@
 
     <link rel="stylesheet" href="./css/index.css" />
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-H6SMJ44S4D"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-H6SMJ44S4D"
+    ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-      gtag('config', 'G-H6SMJ44S4D');
+      gtag("config", "G-H6SMJ44S4D");
     </script>
     <!-- End Google tag -->
     <!-- Meta Pixel Code -->
     <script>
-      !function(f,b,e,v,n,t,s)
-      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-              n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-        n.queue=[];t=b.createElement(e);t.async=!0;
-        t.src=v;s=b.getElementsByTagName(e)[0];
-        s.parentNode.insertBefore(t,s)}(window, document,'script',
-              'https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', '1226959581369471');
-      fbq('track', 'PageView');
-      fbq('track', 'Purchase');
+      !(function (f, b, e, v, n, t, s) {
+        if (f.fbq) return;
+        n = f.fbq = function () {
+          n.callMethod
+            ? n.callMethod.apply(n, arguments)
+            : n.queue.push(arguments);
+        };
+        if (!f._fbq) f._fbq = n;
+        n.push = n;
+        n.loaded = !0;
+        n.version = "2.0";
+        n.queue = [];
+        t = b.createElement(e);
+        t.async = !0;
+        t.src = v;
+        s = b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t, s);
+      })(
+        window,
+        document,
+        "script",
+        "https://connect.facebook.net/en_US/fbevents.js"
+      );
+      fbq("init", "1226959581369471");
+      fbq("track", "PageView");
+      fbq("track", "Purchase");
     </script>
-    <noscript><img height="1" width="1" style="display:none"
-                   src="https://www.facebook.com/tr?id=1226959581369471&ev=PageView&noscript=1"
+    <noscript
+      ><img
+        height="1"
+        width="1"
+        style="display: none"
+        src="https://www.facebook.com/tr?id=1226959581369471&ev=PageView&noscript=1"
     /></noscript>
     <!-- End Meta Pixel Code -->
-
   </head>
 
   <body style="padding: 0; margin: 0">
-  <script>
-    fbq('track', 'Purchase');
-  </script>
+    <script>
+      fbq("track", "Purchase");
+    </script>
     <section
       style="
         height: 100vh;
         padding: 15px;
-        background: #1d1d1df7;
+        background: var(--main-bg-color);
+        /* background: #1d1d1df7; */
         display: flex;
         justify-content: center;
         flex-direction: column;
@@ -74,7 +98,8 @@
         <h3
           style="
             padding-right: 5px;
-            color: #fff;
+            /* color: #fff; */
+            color: var(--main-text-color);
             font-size: 20px;
             font-weight: 600;
             font-style: normal;
@@ -98,7 +123,8 @@
           align-items: center;
           margin-bottom: 40px;
           margin-top: 40px;
-          color: #fff;
+          /* color: #fff; */
+          color: var(--second-text-color);
           max-width: 500px;
           font-size: 18px;
           font-style: normal;
@@ -106,10 +132,10 @@
           gap: 10px;
         "
       >
-        <span>ЧОРНА ПʼЯТНИЦЯ<br>Встигніть забронювати масаж на 25 листопада!</span>
+        <!-- <span>ЧОРНА ПʼЯТНИЦЯ<br>Встигніть забронювати масаж на 25 листопада!</span>
         <span style="color: #8bc34a"
           >Цілком можливо, що це буде за наш рахунок</span
-        >
+        > -->
 
         <div
           style="
@@ -132,11 +158,16 @@
           border-radius: 6px;
           border: none;
           background-color: transparent;
-          box-shadow: rgba(200, 200, 200, 0.25) 0px 54px 55px,
+          box-shadow: rgba(200, 200, 200, 0.35) 0px 54px 55px,
+            rgba(200, 200, 200, 0.22) 0px -12px 30px,
+            rgba(200, 200, 200, 0.22) 0px 4px 6px,
+            rgba(200, 200, 200, 0.27) 0px 12px 13px,
+            rgba(200, 200, 200, 0.19) 0px -3px 5px;
+          /* box-shadow: rgba(200, 200, 200, 0.25) 0px 54px 55px,
             rgba(200, 200, 200, 0.12) 0px -12px 30px,
             rgba(200, 200, 200, 0.12) 0px 4px 6px,
             rgba(200, 200, 200, 0.17) 0px 12px 13px,
-            rgba(200, 200, 200, 0.09) 0px -3px 5px;
+            rgba(200, 200, 200, 0.09) 0px -3px 5px; */
         "
       >
         <a
@@ -144,7 +175,9 @@
           style="
             text-decoration: none;
             font-size: 14px;
-            color: rgb(198, 198, 97);
+            font-weight: 600;
+            color: var(--main-accent-color);
+            /* color: rgb(198, 198, 97); */
             text-transform: uppercase;
           "
           >На головну</a

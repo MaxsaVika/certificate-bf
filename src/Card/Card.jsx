@@ -4,14 +4,21 @@ import Button from "../Button/Button";
 import css from "./Card.module.css";
 import { useDrag } from "@use-gesture/react";
 import useCertificate from "../hooks/useCertificate";
-import { FiPlus } from "react-icons/fi";
-import { MdOutlineTouchApp } from "react-icons/md";
+// import { FiPlus } from "react-icons/fi";
+// import { MdOutlineTouchApp } from "react-icons/md";
 import { nanoid } from "nanoid";
 
 function Card({
   title,
+  colorTitle,
+  subTitle,
+  titleOne,
+  titleFull,
+  image,
+  type,
   price,
-  img,
+  priceOne,
+  amount,
   offsetRadius,
   index,
   animationConfig,
@@ -32,7 +39,7 @@ function Card({
   const offsetFromMiddle = index - offsetRadius;
   const totalPresentables = 2 * offsetRadius + 1;
   const distanceFactor = 1 - Math.abs(offsetFromMiddle / (offsetRadius + 4));
-  const windowWidth = window.screen.availWidth;
+  // const windowWidth = window.screen.availWidth;
 
   let translateY = -50;
 
@@ -104,14 +111,14 @@ function Card({
     }
   });
 
-  const handleSelect = (e) => {
+  const handleSelect = (e, titleCard, price) => {
     e.stopPropagation();
 
     const cardId = nanoid(10);
 
     saveInfo({
       id: cardId,
-      title,
+      title: titleCard,
       price,
       check: true,
     });
@@ -120,10 +127,6 @@ function Card({
   const handleClick = (e) => {
     if (info.check) {
       return;
-    }
-
-    if (windowWidth <= 1365 && distanceFactor === 1) {
-      handleSelect(e);
     }
 
     moveSlide(offsetFromMiddle);
@@ -140,7 +143,6 @@ function Card({
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        // filter: `${distanceFactor !== 1 ? "blur(1px)" : "blur(0)"}`,
         boxShadow: `${
           distanceFactor === 1 ? "rgb(226 214 214 / 15%) 0px 2px 8px" : "0"
         }`,
@@ -168,30 +170,87 @@ function Card({
             />
           </>
         )}
-        <img src={img} alt={title} className={css.cardImg} />
+        <img
+          // src={
+          //   type === 1
+          //     ? "/images/certificate_4_template.jpg"
+          //     : "/images/certificate_4_template_gift.jpg"
+          // }
+          src={image}
+          alt={title}
+          className={css.cardImg}
+        />
 
-        <div className={css.cardBtn}>
-          {distanceFactor === 1 ? (
+        <div
+          className={
+            type === 1 ? css.cardTitleWrapper : css.cardTitleGiftWrapper
+          }
+        >
+          <h2
+            style={{ color: `${colorTitle}` }}
+            className={type === 1 ? css.cardTitle : css.cardTitleGift}
+          >
+            {title}
+          </h2>
+        </div>
+
+        <div
+          className={
+            type === 1 ? css.cardSubTitleWrapper : css.cardSubTitleGiftWrapper
+          }
+        >
+          <p className={type === 1 ? css.cardSubTitle : css.cardSuTitleGift}>
+            {subTitle}
+          </p>
+        </div>
+
+        {priceOne && distanceFactor === 1 && (
+          <>
+            <div className={css.cardBtnOne}>
+              <Button
+                type="button"
+                text="1 сеанс"
+                accent={priceOne + " UAH"}
+                onClick={(e) => handleSelect(e, titleOne, priceOne)}
+              />
+            </div>
+          </>
+        )}
+
+        {distanceFactor === 1 && (
+          <div className={css.cardBtn}>
             <Button
               type="button"
-              icon={
-                windowWidth <= 768 ? (
-                  <MdOutlineTouchApp className={css.cardButtonIcon} />
-                ) : (
-                  <FiPlus className={css.cardButtonIcon} />
-                )
-              }
-              onClick={(e) =>
-                windowWidth <= 1365 ? undefined : handleSelect(e)
-              }
+              text={amount ? amount + " сеансів" : "сертифікат"}
+              accent={price + " UAH"}
+              onClick={(e) => handleSelect(e, titleFull, price)}
             />
-          ) : (
-            <></>
-          )}
-        </div>
+          </div>
+        )}
       </animated.div>
     </animated.div>
   );
 }
 
 export default Card;
+
+/* <div className={css.cardBtn}>
+    {distanceFactor === 1 ? (
+      <Button
+        type="button"
+        text={amount}
+        icon={
+          windowWidth <= 768 ? (
+            <MdOutlineTouchApp className={css.cardButtonIcon} />
+          ) : (
+            <FiPlus className={css.cardButtonIcon} />
+          )
+        }
+        onClick={(e) =>
+          windowWidth <= 1365 ? undefined : handleSelect(e)
+        }
+      />
+    ) : (
+      <></>
+    )}
+  </div> */

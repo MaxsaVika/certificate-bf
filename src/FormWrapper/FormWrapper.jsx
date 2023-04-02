@@ -6,6 +6,8 @@ import InputMask from "react-input-mask";
 import { useDrag } from "@use-gesture/react";
 import { useValidation } from "../hooks/useValidation";
 import BarLoader from "react-spinners/BarLoader";
+import SelectManager from "../SelectManager/SelectManager";
+import managerData from "../DataBase/selectManagers";
 
 export default function FormWrapper({ cn }) {
   const { info, saveInfo } = useCertificate();
@@ -14,23 +16,27 @@ export default function FormWrapper({ cn }) {
   const [error, setError] = useState(null);
   const [clientName, setClientName] = useState("");
   const [clientPhone, setClientPhone] = useState("");
+  const [manager, setManager] = useState("");
   const [isDisabled, setIsDisabled] = useState(true);
   const [validationResult, setValidationResult] = useState({
     name: "",
     phone: "",
+    manager: "",
   });
   const [isLoading, setIsLoading] = useState(false);
+  const windowWidth = window.screen.availWidth;
 
   const handleChangeName = (e) => setClientName(e.target.value);
   const handleChangePhone = (e) => setClientPhone(e.target.value);
+  const handleSelectManager = (e) => setManager(e.target.value);
 
   useEffect(() => {
-    setValidationResult({ name: "", phone: "" });
+    setValidationResult({ name: "", phone: "", manager: "" });
 
     if (clientName && clientPhone) {
       setIsDisabled(false);
     }
-  }, [clientName, clientPhone]);
+  }, [clientName, clientPhone, manager]);
 
   const handleCancel = () => {
     saveInfo((prev) => ({ ...prev, check: false }));
@@ -88,6 +94,8 @@ export default function FormWrapper({ cn }) {
       setClientPhone("");
       setIsLoading(false);
     }
+
+    handleCancel();
   };
 
   const bind = useDrag(
@@ -102,10 +110,19 @@ export default function FormWrapper({ cn }) {
   return (
     <div className={css.coverSection}>
       <div {...bind()} className={cn}>
-        <img src="/images/cover.png" alt="BF" className={css.coverImg} />
+        <img
+          src={windowWidth < 768 ? "/images/cover-4.png" : "/images/coverw.png"}
+          alt="BF"
+          className={css.coverImg}
+        />
 
         {info.check ? (
           <>
+            <div className={css.coverTitleWrappper}>
+              <h4 className={css.coverTitle}>{info.title}</h4>
+              <span className={css.coverSubTitlePrice}>{info.price} UAH</span>
+            </div>
+
             <form className={css.userForm} onSubmit={handleSubmit}>
               <input
                 type="text"
@@ -158,16 +175,32 @@ export default function FormWrapper({ cn }) {
                 disabled={isDisabled || isLoading}
               >
                 {isLoading ? (
-                  <BarLoader
-                    color="rgb(248, 211, 47)"
-                    className={css.coverButtonIcon}
-                  />
+                  <BarLoader color="#f8bf00" className={css.coverButtonIcon} />
                 ) : (
                   <>
                     Придбати <TbCheck className={css.coverButtonIcon} />{" "}
                   </>
                 )}
               </button>
+
+              <div className={css.userFormAdviceSelectWrapper}>
+                <label for="advice" className={css.userFormAdviceSelectLabel}>
+                  Хто порадив наш сертифікат?
+                </label>
+                <select
+                  id="advice"
+                  name="advice"
+                  className={css.userFormAdviceSelect}
+                  onChange={(e) => {
+                    console.log(e.target.value);
+                  }}
+                >
+                  <SelectManager
+                    items={managerData}
+                    onChange={(e) => handleSelectManager(e)}
+                  />
+                </select>
+              </div>
             </form>
 
             <button

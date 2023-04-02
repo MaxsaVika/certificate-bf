@@ -2,25 +2,53 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  width: 100%;
+  font-family: 'Evolventa';
+
+  color: var(--main-text-color);
 
   background-color: transparent;
-  color: rgba(248, 211, 47, 0.9);
-  border: none;
+  border: 1px solid var(--main-bg-color);
   outline: none;
-  border-radius: 6px; 
+  border-radius: 4px; 
+  font-weight: 400;
+  font-size: 14px;
   cursor: pointer;
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.btnAccent{
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--main-accent-color);
+}
+
   .btn:hover{
-    border: 1px solid rgba(224, 209, 143, 0.2);
+    background-color: var(--main-accent-color);
+    color: var(--main-bg-color);
     box-shadow: rgb(226 214 214 / 15%) 0px 2px 8px;
-    transform: scale(1.15);
+    transform: scale(1.1);
   }
 
-  @media screen and (max-width: 768px) {
+  .btn:hover .btnAccent{
+    color: var(--main-text-color);
+  }
+
+  @media screen and (max-width: 767px) {
     .btn:hover{
       background-color:inherit;
     }
    
+  }
+
+  @media screen and (min-width: 768px) {
+    .btn{
+      font-size: 26px;
     }
+
+    .btnAccent{
+      font-size: 30px;
+    }
+   
+  }
